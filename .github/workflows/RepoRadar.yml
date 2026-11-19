@@ -25,6 +25,8 @@ jobs:
 
       - name: Fetch trending lists
         run: python FetchTrending.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Fetch details of new repos
         run: python FetchDetails.py

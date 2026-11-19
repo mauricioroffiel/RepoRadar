@@ -1,4 +1,5 @@
 import json
+import os
 import requests
 from bs4 import BeautifulSoup
 
@@ -14,6 +15,24 @@ def cleanNumber(text):
     if digits == "":
         return 0
     return int(digits)
+
+
+token = os.environ.get("GITHUB_TOKEN", "")
+apiHeaders = {"User-Agent": "RepoRadar", "Accept": "application/vnd.github+json"}
+if token != "":
+    apiHeaders["Authorization"] = "Bearer " + token
+avatarCache = {}
+
+
+def avatarFor(owner):
+    # The API gives the real avatar (by numeric id) for both users and organizations
+    if owner not in avatarCache:
+        avatar = "https://github.com/" + owner + ".png"
+        response = requests.get("https://api.github.com/users/" + owner, headers=apiHeaders)
+        if response.status_code == 200:
+            avatar = response.json().get("avatar_url") or avatar
+        avatarCache[owner] = avatar
+    return avatarCache[owner]
 
 
 def fetchTrending(period):
@@ -48,6 +67,7 @@ def fetchTrending(period):
             "language": language,
             "stars": stars,
             "gained": gained,
+            "avatar": avatarFor(name.split("/")[0]),
         })
 
     return repos

@@ -63,9 +63,10 @@ def buildCard(position, repo, period):
     card = '<article class="card">'
     card += '<header class="cardHead">'
     card += '<span class="rank">' + str(position) + "</span>"
-    avatarUrl = "https://github.com/" + owner + ".png?size=96"
+    avatarUrl = repo.get("avatar") or "https://github.com/" + owner + ".png"
+    avatarUrl += ("&" if "?" in avatarUrl else "?") + "s=96"
     card += '<a class="avatar" href="https://github.com/' + safe(owner) + '" target="_blank" rel="noopener">'
-    card += '<img src="' + safe(avatarUrl) + '" alt="' + safe(owner) + '" width="40" height="40" loading="lazy"></a>'
+    card += '<img src="' + safe(avatarUrl) + '" alt="' + safe(owner) + '" width="40" height="40"></a>'
     card += '<div class="title"><a href="' + safe(repo["url"]) + '" target="_blank" rel="noopener">'
     card += '<span class="owner">' + safe(owner) + ' /</span> <span class="project">' + safe(project) + "</span></a>"
     card += '<div class="meta">'
