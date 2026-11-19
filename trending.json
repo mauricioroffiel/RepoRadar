@@ -1,25 +1,11 @@
 {
   "weekly": [
     {
-      "name": "GoogleChrome/modern-web-guidance-src",
-      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
-      "description": "Keep your coding agent up to date with the latest web best practices",
-      "language": "TypeScript",
-      "stars": 8882,
-      "gained": 7257,
-      "avatar": "https://avatars.githubusercontent.com/u/1778935?v=4",
-      "creator": {
-        "login": "paulirish",
-        "avatar": "https://avatars.githubusercontent.com/u/39191?v=4",
-        "role": "topContributor"
-      }
-    },
-    {
       "name": "backnotprop/plannotator",
       "url": "https://github.com/backnotprop/plannotator",
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "language": "TypeScript",
-      "stars": 13485,
+      "stars": 13635,
       "gained": 3290,
       "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
       "creator": {
@@ -29,53 +15,11 @@
       }
     },
     {
-      "name": "meta/astryx",
-      "url": "https://github.com/meta/astryx",
-      "description": "An open source design system that's fully customizable and agent ready",
-      "language": "TypeScript",
-      "stars": 30628,
-      "gained": 6250,
-      "avatar": "https://avatars.githubusercontent.com/u/69631?v=4",
-      "creator": {
-        "login": "cixzhang",
-        "avatar": "https://avatars.githubusercontent.com/u/2781099?v=4",
-        "role": "topContributor"
-      }
-    },
-    {
-      "name": "we-promise/sure",
-      "url": "https://github.com/we-promise/sure",
-      "description": "The personal finance app for everyone (by everyone)",
-      "language": "Ruby",
-      "stars": 16526,
-      "gained": 3866,
-      "avatar": "https://avatars.githubusercontent.com/u/222344567?v=4",
-      "creator": {
-        "login": "jjmata",
-        "avatar": "https://avatars.githubusercontent.com/u/187772?v=4",
-        "role": "topContributor"
-      }
-    },
-    {
-      "name": "alibaba/open-code-review",
-      "url": "https://github.com/alibaba/open-code-review",
-      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "language": "Go",
-      "stars": 54205,
-      "gained": 4383,
-      "avatar": "https://avatars.githubusercontent.com/u/1961952?v=4",
-      "creator": {
-        "login": "lizhengfeng101",
-        "avatar": "https://avatars.githubusercontent.com/u/254839944?v=4",
-        "role": "topContributor"
-      }
-    },
-    {
       "name": "google-labs-code/stitch-skills",
       "url": "https://github.com/google-labs-code/stitch-skills",
       "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
       "language": "TypeScript",
-      "stars": 10451,
+      "stars": 10661,
       "gained": 1567,
       "avatar": "https://avatars.githubusercontent.com/u/161364575?v=4",
       "creator": {
@@ -85,16 +29,44 @@
       }
     },
     {
-      "name": "tradermonty/claude-trading-skills",
-      "url": "https://github.com/tradermonty/claude-trading-skills",
-      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
-      "language": "Python",
-      "stars": 7099,
-      "gained": 3242,
-      "avatar": "https://avatars.githubusercontent.com/u/205491838?v=4",
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "language": "TypeScript",
+      "stars": 9074,
+      "gained": 7257,
+      "avatar": "https://avatars.githubusercontent.com/u/1778935?v=4",
       "creator": {
-        "login": "tradermonty",
-        "avatar": "https://avatars.githubusercontent.com/u/205491838?v=4",
+        "login": "paulirish",
+        "avatar": "https://avatars.githubusercontent.com/u/39191?v=4",
+        "role": "topContributor"
+      }
+    },
+    {
+      "name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": 54354,
+      "gained": 4383,
+      "avatar": "https://avatars.githubusercontent.com/u/1961952?v=4",
+      "creator": {
+        "login": "lizhengfeng101",
+        "avatar": "https://avatars.githubusercontent.com/u/254839944?v=4",
+        "role": "topContributor"
+      }
+    },
+    {
+      "name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "stars": 70707,
+      "gained": 2423,
+      "avatar": "https://avatars.githubusercontent.com/u/455140?v=4",
+      "creator": {
+        "login": "mvanhorn",
+        "avatar": "https://avatars.githubusercontent.com/u/455140?v=4",
         "role": "owner"
       }
     },
@@ -103,7 +75,7 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "description": "Chrome DevTools for coding agents",
       "language": "TypeScript",
-      "stars": 58242,
+      "stars": 58341,
       "gained": 3143,
       "avatar": "https://avatars.githubusercontent.com/u/11260967?v=4",
       "creator": {
@@ -113,30 +85,58 @@
       }
     },
     {
-      "name": "anthropics/skills",
-      "url": "https://github.com/anthropics/skills",
-      "description": "Public repository for Agent Skills",
+      "name": "tradermonty/claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
       "language": "Python",
-      "stars": 197272,
-      "gained": 4381,
-      "avatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
+      "stars": 7219,
+      "gained": 3242,
+      "avatar": "https://avatars.githubusercontent.com/u/205491838?v=4",
       "creator": {
-        "login": "rlancemartin",
-        "avatar": "https://avatars.githubusercontent.com/u/122662504?v=4",
+        "login": "tradermonty",
+        "avatar": "https://avatars.githubusercontent.com/u/205491838?v=4",
+        "role": "owner"
+      }
+    },
+    {
+      "name": "ag-ui-protocol/ag-ui",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "language": "TypeScript",
+      "stars": 20605,
+      "gained": 3221,
+      "avatar": "https://avatars.githubusercontent.com/u/209775067?v=4",
+      "creator": {
+        "login": "ranst91",
+        "avatar": "https://avatars.githubusercontent.com/u/11162004?v=4",
         "role": "topContributor"
       }
     },
     {
-      "name": "ZhuLinsen/daily_stock_analysis",
-      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
-      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
-      "language": "Python",
-      "stars": 73389,
-      "gained": 3566,
-      "avatar": "https://avatars.githubusercontent.com/u/42829555?v=4",
+      "name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "stars": 30902,
+      "gained": 6250,
+      "avatar": "https://avatars.githubusercontent.com/u/69631?v=4",
       "creator": {
-        "login": "ZhuLinsen",
-        "avatar": "https://avatars.githubusercontent.com/u/42829555?v=4",
+        "login": "cixzhang",
+        "avatar": "https://avatars.githubusercontent.com/u/2781099?v=4",
+        "role": "topContributor"
+      }
+    },
+    {
+      "name": "pookjw/HermesEnabler",
+      "url": "https://github.com/pookjw/HermesEnabler",
+      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "language": "Objective-C",
+      "stars": 2243,
+      "gained": 1019,
+      "avatar": "https://avatars.githubusercontent.com/u/11896738?v=4",
+      "creator": {
+        "login": "pookjw",
+        "avatar": "https://avatars.githubusercontent.com/u/11896738?v=4",
         "role": "owner"
       }
     }
@@ -147,7 +147,7 @@
       "url": "https://github.com/Nutlope/hallmark",
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "language": "CSS",
-      "stars": 57602,
+      "stars": 57995,
       "gained": 27295,
       "avatar": "https://avatars.githubusercontent.com/u/63742054?v=4",
       "creator": {
@@ -161,7 +161,7 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "language": "JavaScript",
-      "stars": 75424,
+      "stars": 75773,
       "gained": 44600,
       "avatar": "https://avatars.githubusercontent.com/u/314135?v=4",
       "creator": {
@@ -171,39 +171,11 @@
       }
     },
     {
-      "name": "pingdotgg/t3code",
-      "url": "https://github.com/pingdotgg/t3code",
-      "description": "The best way to control Claude Code, Codex and more from any computer or phone",
-      "language": "TypeScript",
-      "stars": 65387,
-      "gained": 36872,
-      "avatar": "https://avatars.githubusercontent.com/u/89191727?v=4",
-      "creator": {
-        "login": "juliusmarminge",
-        "avatar": "https://avatars.githubusercontent.com/u/51714798?v=4",
-        "role": "topContributor"
-      }
-    },
-    {
-      "name": "php/php-src",
-      "url": "https://github.com/php/php-src",
-      "description": "The PHP Interpreter",
-      "language": "C",
-      "stars": 41813,
-      "gained": 1454,
-      "avatar": "https://avatars.githubusercontent.com/u/25158?v=4",
-      "creator": {
-        "login": "dstogov",
-        "avatar": "https://avatars.githubusercontent.com/u/2510034?v=4",
-        "role": "topContributor"
-      }
-    },
-    {
       "name": "milind-soni/OpenMausBot",
       "url": "https://github.com/milind-soni/OpenMausBot",
       "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
       "language": "TypeScript",
-      "stars": 25461,
+      "stars": 25767,
       "gained": 20270,
       "avatar": "https://avatars.githubusercontent.com/u/46266943?v=4",
       "creator": {
@@ -213,11 +185,25 @@
       }
     },
     {
+      "name": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "description": "The best way to control Claude Code, Codex and more from any computer or phone",
+      "language": "TypeScript",
+      "stars": 66269,
+      "gained": 36872,
+      "avatar": "https://avatars.githubusercontent.com/u/89191727?v=4",
+      "creator": {
+        "login": "juliusmarminge",
+        "avatar": "https://avatars.githubusercontent.com/u/51714798?v=4",
+        "role": "topContributor"
+      }
+    },
+    {
       "name": "anthropics/skills",
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 197272,
+      "stars": 197648,
       "gained": 15769,
       "avatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
       "creator": {
@@ -231,7 +217,7 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "language": "TypeScript",
-      "stars": 118277,
+      "stars": 118407,
       "gained": 17311,
       "avatar": "https://avatars.githubusercontent.com/u/683968?v=4",
       "creator": {
@@ -241,16 +227,16 @@
       }
     },
     {
-      "name": "pbakaus/impeccable",
-      "url": "https://github.com/pbakaus/impeccable",
-      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
-      "language": "Rust",
-      "stars": 112978,
-      "gained": 30662,
-      "avatar": "https://avatars.githubusercontent.com/u/43004?v=4",
+      "name": "Jakeschincariol/instagram-agent-skill",
+      "url": "https://github.com/Jakeschincariol/instagram-agent-skill",
+      "description": "Thirteen Claude skills that run an Instagram account: Reels off 26 scored hook formulas, a viral research skill, a caption linter, and a humanizer. Free, MIT.",
+      "language": "Python",
+      "stars": 7308,
+      "gained": 5309,
+      "avatar": "https://avatars.githubusercontent.com/u/196724947?v=4",
       "creator": {
-        "login": "pbakaus",
-        "avatar": "https://avatars.githubusercontent.com/u/43004?v=4",
+        "login": "Jakeschincariol",
+        "avatar": "https://avatars.githubusercontent.com/u/196724947?v=4",
         "role": "owner"
       }
     },
@@ -259,7 +245,7 @@
       "url": "https://github.com/backnotprop/plannotator",
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "language": "TypeScript",
-      "stars": 13485,
+      "stars": 13635,
       "gained": 3868,
       "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
       "creator": {
@@ -273,7 +259,7 @@
       "url": "https://github.com/HKUDS/DeepTutor",
       "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
       "language": "Python",
-      "stars": 60545,
+      "stars": 60783,
       "gained": 19065,
       "avatar": "https://avatars.githubusercontent.com/u/118165258?v=4",
       "creator": {
@@ -281,9 +267,23 @@
         "avatar": "https://avatars.githubusercontent.com/u/150592536?v=4",
         "role": "topContributor"
       }
+    },
+    {
+      "name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "language": "Rust",
+      "stars": 113383,
+      "gained": 30662,
+      "avatar": "https://avatars.githubusercontent.com/u/43004?v=4",
+      "creator": {
+        "login": "pbakaus",
+        "avatar": "https://avatars.githubusercontent.com/u/43004?v=4",
+        "role": "owner"
+      }
     }
   ],
-  "fetchedAt": "2026-11-19T03:42:21+00:00",
+  "fetchedAt": "2026-11-19T20:26:15+00:00",
   "previous": {
     "fetchedAt": "2026-11-19T00:07:00+00:00",
     "weekly": [

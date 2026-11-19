@@ -1,0 +1,12 @@
+{
+  "problem": "Helps people quickly learn what is happening right now on a topic, person or company, since search engines and AI models lag behind community discussion. It is for anyone preparing for a meeting, a sales call or a build.",
+  "stack": {
+    "frontend": "—",
+    "backend": "Python 3.12+ scripts with no runtime dependencies; a Go-based MCP server in the mcp folder",
+    "database": "— (local files and caches; test fixtures in JSON/HTML)",
+    "ai": "An AI agent skill (SKILL.md) for Claude Code, Codex, Cursor, Copilot, Gemini CLI and other Agent Skills hosts; an AI judge synthesizes results; Perplexity deep research is mentioned",
+    "deploy": "Claude Code plugin marketplace, npx skills add, plus Codex, Gemini and other plugin manifests; MCP server"
+  },
+  "whatsNew": "It searches many platforms in parallel (Reddit, X, YouTube, TikTok, HN, Polymarket, GitHub) and scores items by real engagement like upvotes, likes and betting money rather than editor ranking. An AI agent then writes one grounded summary.",
+  "technologies": ["Python", "Go", "MCP", "Agent Skills", "Claude Code plugin", "pytest", "towncrier", "Reddit/X/YouTube search"]
+}

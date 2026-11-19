@@ -1,0 +1,12 @@
+{
+  "problem": "Lets owners of other Apple Watch models turn on the Hermès watch faces, which are normally limited to certain devices. It is for tinkerers who sideload the app onto a paired iPhone and Watch.",
+  "stack": {
+    "frontend": "SwiftUI apps for Apple Watch (HermesEnabler2) and iPhone (HermesCompanion)",
+    "backend": "Objective-C and Swift on-device code (BQCore), WatchConnectivity for iPhone-Watch messaging, C tests",
+    "database": "— (uses plist files such as MGDefaults.plist and MGOffsets.plist; app also keeps backups)",
+    "ai": "—",
+    "deploy": "Sideloaded IPA (via Sideloadly on macOS or WatchBridge on Windows) or built with Xcode; supports watchOS 27.0 to 27.3 beta 1"
+  },
+  "whatsNew": "It changes device capability values (MobileGestalt-style settings) on the Watch itself so that restricted watch faces appear on unsupported models. It includes backup and recovery checks, and a Python layout test.",
+  "technologies": ["Swift", "SwiftUI", "Objective-C", "watchOS", "WatchConnectivity", "MobileGestalt", "Xcode", "Sideloadly"]
+}

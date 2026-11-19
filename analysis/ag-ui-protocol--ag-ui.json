@@ -1,0 +1,12 @@
+{
+  "problem": "AI agents stream tokens, call tools, share state and pause for humans, and every framework wires this to the user interface differently. AG-UI gives developers one standard way to connect any agent to any app.",
+  "stack": {
+    "frontend": "TypeScript client SDK (@ag-ui/client); CopilotKit on Next.js in scaffolded apps, a terminal client, and a 'dojo' demo app",
+    "backend": "Python (FastAPI example, ag-ui-protocol package), TypeScript and .NET SDKs, with many agent-framework integrations",
+    "database": "—",
+    "ai": "Framework-agnostic: integrations for LangGraph, CrewAI, Mastra, Pydantic AI, LlamaIndex, Agno, AG2, OpenAI Agents, Claude Agent SDK, Vercel AI SDK, Google ADK, AWS Strands, Microsoft Agent Framework and more; generated templates call OpenAI",
+    "deploy": "npm and Python packages, a create-ag-ui-app CLI, docs site; monorepo built with pnpm and Nx"
+  },
+  "whatsNew": "It defines one open, event-based protocol: the agent streams typed events (text, tool calls, state updates, human pauses) over HTTP, and any client can render them. The 1.0 spec is frozen with a JSON Schema, and the TypeScript, Python and .NET SDKs are generated from it.",
+  "technologies": ["AG-UI protocol", "TypeScript", "Python", "FastAPI", "CopilotKit", "pnpm", "Nx", "JSON Schema"]
+}

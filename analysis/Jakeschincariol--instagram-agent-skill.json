@@ -1,0 +1,12 @@
+{
+  "problem": "Helps Instagram creators and small brands plan, write and check posts, Reels, captions, comments and DMs using Claude. It also removes the telltale 'AI-sounding' style from drafts.",
+  "stack": {
+    "frontend": "—",
+    "backend": "Python scripts (no dependencies, no network) that run locally, plus Markdown SKILL.md instruction files",
+    "database": "— (uses local JSON files such as hooks.json and rubric.json, and a voice.md style file)",
+    "ai": "Claude skills for Claude Code (13 slash commands); a SKILL.md can also be pasted into any chat",
+    "deploy": "Claude Code plugin via marketplace, or copy the skill folders into ~/.claude/skills"
+  },
+  "whatsNew": "Instead of only prompting the model, it ships small Python tools that actually run: they score hooks against 26 formulas, time scripts, and lint text. A 'humanizer' strips em dashes and hidden watermark characters and scores the result against a five-check panel.",
+  "technologies": ["Claude Code skills", "Claude plugin marketplace", "Python", "JSON rubrics", "Markdown", "Instagram"]
+}
