@@ -1,0 +1,82 @@
+name: RepoRadar
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install libraries
+        run: pip install requests beautifulsoup4
+
+      - name: Fetch trending lists
+        run: python FetchTrending.py
+
+      - name: Fetch details of new repos
+        run: python FetchDetails.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for new repos
+        id: check
+        run: |
+          if ls pending/*.md > /dev/null 2>&1; then
+            echo "hasNew=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Analyze new repos with Claude
+        if: steps.check.outputs.hasNew == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          claude_args: '--max-turns 60 --allowedTools "Read,Write,Glob"'
+          prompt: |
+            Each .md file in the pending/ folder describes one GitHub repo: its README, dependency files and file tree.
+            For every file pending/NAME.md, write analysis/NAME.json (same NAME). Write nothing else.
+
+            Each JSON file must have exactly these keys, all in plain English that a first-year AI student can follow:
+            {
+              "problem": "1-2 sentences: what problem it solves and for whom",
+              "stack": {
+                "frontend": "UI framework/libraries, or —",
+                "backend": "server/runtime/core language and frameworks, or —",
+                "database": "storage/database/vector store, or —",
+                "ai": "models, AI SDKs, agent frameworks, or —",
+                "deploy": "how it ships: Docker, Vercel, npm package, CLI, desktop app, etc., or —"
+              },
+              "whatsNew": "1-2 sentences: what is new or unusual about how it works, compared to the usual way",
+              "technologies": ["up to 8 key technology names"]
+            }
+
+            Use only facts found in the pending file. If a layer does not apply or is not stated, use "—". Do not guess versions.
+            Output must be valid JSON.
+
+      - name: Build page
+        run: python BuildPage.py
+
+      - name: Save results
+        run: |
+          git config user.name "RepoRadar Bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add trending.json analysis docs
+          if git diff --cached --quiet; then
+            echo "Nothing changed"
+          else
+            git commit -m "Daily radar update"
+            git push
+          fi

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RepoRadar</title>
+<meta name="description" content="The stacks behind GitHub's trending repos, explained daily.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f4f2ec;
+  --surface: #fffdf8;
+  --ink: #1d1c19;
+  --muted: #6b6860;
+  --line: #dedad0;
+  --accent: #0f7a5c;
+  --accentSoft: #e1f0ea;
+  --chip: #eeebe3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121311;
+    --surface: #1a1c19;
+    --ink: #ecebe6;
+    --muted: #9a998f;
+    --line: #2c2e2a;
+    --accent: #4fd1a5;
+    --accentSoft: #17302a;
+    --chip: #24261f;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.55 "IBM Plex Sans", system-ui, sans-serif;
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+.top { padding: 48px 0 24px; border-bottom: 1px solid var(--line); }
+.brand {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 0 0 12px; font-weight: 600; letter-spacing: -.02em; }
+.lead { color: var(--muted); max-width: 640px; margin: 0; }
+.bar {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  align-items: center; justify-content: space-between;
+  padding: 20px 0;
+}
+[role="tablist"] { display: inline-flex; background: var(--chip); border-radius: 10px; padding: 4px; }
+[role="tab"] {
+  font: 600 14px "IBM Plex Sans", sans-serif;
+  border: 0; background: transparent; color: var(--muted);
+  padding: 8px 18px; border-radius: 7px; cursor: pointer;
+}
+[role="tab"][aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+.updated { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+  padding-bottom: 56px;
+}
+@media (max-width: 400px) { .grid { grid-template-columns: 1fr; } }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex; flex-direction: column; gap: 14px;
+  min-width: 0;
+}
+.cardHead { display: flex; gap: 14px; align-items: flex-start; }
+.rank {
+  font: 600 13px "IBM Plex Mono", monospace;
+  color: var(--accent);
+  background: var(--accentSoft);
+  border-radius: 8px;
+  min-width: 30px; height: 30px;
+  display: grid; place-items: center;
+}
+.title { min-width: 0; }
+.title a { color: var(--ink); text-decoration: none; font-family: "IBM Plex Mono", monospace; font-size: 15px; overflow-wrap: anywhere; }
+.title a:hover .project { text-decoration: underline; }
+.owner { color: var(--muted); }
+.project { font-weight: 600; }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.gained { color: var(--accent); font-weight: 600; }
+h3 {
+  font: 600 11px "IBM Plex Mono", monospace;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 4px;
+}
+section p, .description { margin: 0; }
+.stack { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin: 0; }
+.layer { display: grid; grid-template-columns: 84px 1fr; gap: 10px; background: var(--surface); padding: 7px 10px; font-size: 13.5px; }
+.layer dt { color: var(--muted); font-size: 12px; padding-top: 1px; }
+.layer dd { margin: 0; overflow-wrap: anywhere; }
+.layer.empty dd { color: var(--muted); }
+.new { border-left: 3px solid var(--accent); padding-left: 12px; }
+.chips { list-style: none; padding: 0; margin: auto 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.chips li { font: 12px "IBM Plex Mono", monospace; background: var(--chip); padding: 3px 8px; border-radius: 6px; }
+.waiting { color: var(--muted); font-style: italic; margin: 0; }
+footer { border-top: 1px solid var(--line); padding: 20px 0 40px; color: var(--muted); font-size: 13px; }
+footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <p class="brand">RepoRadar</p>
+    <h1>What's trending on GitHub, and what it's built with.</h1>
+    <p class="lead">Every day, the top repos from GitHub Trending get read and broken down: the problem each one solves, the stack behind it, and what's new about its approach.</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="bar">
+    <div role="tablist" aria-label="Period">{{tabs}}</div>
+    <span class="updated">Updated {{updated}}</span>
+  </div>
+  {{panels}}
+</main>
+<footer>
+  <div class="wrap">Lists from <a href="https://github.com/trending">GitHub Trending</a>. Analysis written by Claude from each repo's README, dependency files and file tree, so it can miss things.</div>
+</footer>
+<script>
+var tabs = document.querySelectorAll('[role="tab"]');
+tabs.forEach(function (tab) {
+  tab.addEventListener("click", function () {
+    tabs.forEach(function (other) {
+      other.setAttribute("aria-selected", other === tab ? "true" : "false");
+      document.getElementById(other.getAttribute("aria-controls")).hidden = other !== tab;
+    });
+  });
+});
+</script>
+</body>
+</html>
