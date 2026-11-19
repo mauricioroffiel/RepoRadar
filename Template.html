@@ -30,6 +30,8 @@
   --color-field: #1d1c19; --color-field-ink: #f4f2ec;
   --color-mark: #0f7a5c; --color-mark-ink: #fffdf8;
   --color-up: #1a7f37; --color-down: #c62828;
+  --cat-language: #6d28d9; --cat-frontend: #1d4ed8; --cat-backend: #b45309; --cat-database: #0e7490;
+  --cat-ai: #be185d; --cat-deploy: #4d7c0f; --cat-other: #6b6860;
   --font-display: "Radio Canada Big", ui-sans-serif, system-ui, sans-serif; --font-body: "Radio Canada", ui-sans-serif, system-ui, sans-serif;
   --radius-card: 0; --rule-hair: 1px;
   --tracking-display: -0.035em; --display-weight: 700;
@@ -43,6 +45,8 @@
     --color-field: #17302a; --color-field-ink: #ecebe6;
     --color-mark: #4fd1a5; --color-mark-ink: #121311;
     --color-up: #5fd38d; --color-down: #ff7b72;
+    --cat-language: #c4b5fd; --cat-frontend: #93c5fd; --cat-backend: #fcd34d; --cat-database: #67e8f9;
+    --cat-ai: #f9a8d4; --cat-deploy: #bef264; --cat-other: #9a998f;
   }
 }
 
@@ -132,12 +136,20 @@ button { font: inherit; }
 .waiting { color: var(--color-muted); }
 
 .tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: var(--space-xs); }
-.tags li { font-size: var(--text-sm); background: var(--color-paper-2); padding: var(--space-2xs) var(--space-xs); }
+/* one hue per stack category: tags, stack rows and the key share it */
+.cat-language { --cat: var(--cat-language); } .cat-frontend { --cat: var(--cat-frontend); } .cat-backend { --cat: var(--cat-backend); }
+.cat-database { --cat: var(--cat-database); } .cat-ai { --cat: var(--cat-ai); } .cat-deploy { --cat: var(--cat-deploy); } .cat-other { --cat: var(--cat-other); }
+.tags li { font-size: var(--text-sm); font-weight: 500; color: var(--cat); background: color-mix(in oklab, var(--cat) 13%, var(--color-paper)); padding: var(--space-2xs) var(--space-xs); }
+.legend { list-style: none; padding: 0; margin: var(--space-sm) 0 0; display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-md); font-size: var(--text-sm); color: var(--color-muted); }
+.legend li, .layer dt { display: inline-flex; align-items: center; gap: var(--space-xs); }
+.legend li::before, .layer dt::before { content: ""; width: 10px; height: 10px; flex: none; background: var(--cat); }
 
 .stack { margin: var(--space-xs) 0 0; }
 .layer { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: var(--space-sm); padding-block: var(--space-xs); border-top: var(--rule-hair) solid var(--color-rule); }
 .layer:first-child { border-top: 0; padding-top: 0; }
-.layer dt { font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
+.layer dt { font-size: var(--text-sm); font-weight: 500; color: var(--cat); align-self: start; }
+.layer.empty dt { color: var(--color-muted); }
+.layer.empty dt::before { background: var(--color-rule); }
 .layer dd { margin: 0; font-size: var(--text-sm); overflow-wrap: anywhere; }
 .layer.empty dd { color: var(--color-muted); }
 
@@ -163,6 +175,7 @@ footer a:hover { color: var(--color-mark); }
   <div class="bar">
     <div role="tablist" aria-label="Period">{{tabs}}</div>
     {{movesNote}}
+    {{legend}}
   </div>
   {{panels}}
 </main>

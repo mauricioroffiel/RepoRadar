@@ -2,6 +2,7 @@ import datetime
 import html
 import json
 import os
+import re
 
 layers = [
     ("frontend", "Frontend"),
@@ -40,25 +41,82 @@ def formatNumber(number):
 emptyValues = ("—", "-", "", "none", "n/a")
 
 
+# Colour categories, in the order tags are listed
+categories = [
+    ("language", "Language"),
+    ("frontend", "Frontend"),
+    ("backend", "Backend"),
+    ("database", "Database"),
+    ("ai", "AI"),
+    ("deploy", "Deploy"),
+    ("other", "Other"),
+]
+categoryNames = dict(categories)
+categoryOrder = [key for key, label in categories]
+# Which stack layer to try first when a technology is named in several
+layerSearchOrder = ["database", "ai", "frontend", "backend", "deploy"]
+languages = {
+    "typescript", "javascript", "python", "go", "golang", "rust", "ruby", "c", "c++", "c#",
+    "java", "kotlin", "swift", "php", "css", "html", "shell", "bash", "lua", "dart",
+    "elixir", "scala", "zig", "r", "sql", "objective-c", "markdown",
+}
+
+
+def mentions(text, word):
+    return re.search(r"(?<![\w.+#-])" + re.escape(word) + r"(?![\w+#-])", text) is not None
+
+
+def categoryFor(tech, stack):
+    name = tech.strip().lower()
+    if name in languages:
+        return "language"
+    layerTexts = {key: (stack.get(key) or "").lower() for key in layerSearchOrder}
+    for key in layerSearchOrder:
+        if mentions(layerTexts[key], name):
+            return key
+    # Fall back to any longer word of the name, e.g. "RAG search" in "RAG-style search"
+    for word in name.split():
+        if len(word) < 3:
+            continue
+        for key in layerSearchOrder:
+            if mentions(layerTexts[key], word):
+                return key
+    return "other"
+
+
 def buildStack(analysis):
     stack = analysis.get("stack", {})
     rows = ""
     for key, label in layers:
         value = (stack.get(key) or "").strip()
         if value.lower() in emptyValues:
-            rows += '<div class="layer empty"><dt>' + label + "</dt><dd>None listed</dd></div>"
+            rows += '<div class="layer empty cat-' + key + '"><dt>' + label + "</dt><dd>None listed</dd></div>"
         else:
-            rows += '<div class="layer"><dt>' + label + "</dt><dd>" + safe(value) + "</dd></div>"
+            rows += '<div class="layer cat-' + key + '"><dt>' + label + "</dt><dd>" + safe(value) + "</dd></div>"
     return '<dl class="stack">' + rows + "</dl>"
 
 
 def buildTags(analysis):
-    tags = ""
+    stack = analysis.get("stack", {})
+    tagged = []
     for tech in analysis.get("technologies", [])[:8]:
-        tags += "<li>" + safe(tech) + "</li>"
-    if tags == "":
+        tagged.append((categoryFor(str(tech), stack), str(tech)))
+    if not tagged:
         return ""
+    tagged.sort(key=lambda item: categoryOrder.index(item[0]))
+    tags = ""
+    for category, tech in tagged:
+        label = categoryNames[category]
+        tags += '<li class="tag cat-' + category + '" title="' + label + '">' + safe(tech)
+        tags += '<span class="visually-hidden">, ' + label + " category</span></li>"
     return '<ul class="tags" aria-label="Key technologies">' + tags + "</ul>"
+
+
+def buildLegend():
+    items = ""
+    for key, label in categories:
+        items += '<li class="cat-' + key + '">' + label + "</li>"
+    return '<ul class="legend" aria-label="Colour key">' + items + "</ul>"
 
 
 def withSize(url, size):
@@ -174,7 +232,7 @@ except (KeyError, TypeError, ValueError):
 with open("Template.html") as file:
     template = file.read()
 
-page = template.replace("{{tabs}}", tabs).replace("{{panels}}", panels).replace("{{movesNote}}", movesNote).replace("{{fetchedIso}}", fetchedIso).replace("{{fetchedAt}}", fetchedAt)
+page = template.replace("{{tabs}}", tabs).replace("{{panels}}", panels).replace("{{legend}}", buildLegend()).replace("{{movesNote}}", movesNote).replace("{{fetchedIso}}", fetchedIso).replace("{{fetchedAt}}", fetchedAt)
 
 os.makedirs("docs", exist_ok=True)
 with open("docs/index.html", "w") as file:
