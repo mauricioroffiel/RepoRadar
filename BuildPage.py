@@ -137,12 +137,19 @@ for period in ["weekly", "monthly"]:
     panels += '<section role="tabpanel" id="panel-' + period + '" aria-labelledby="tab-' + period + '" class="repoList"' + hidden + ">" + cards + "</section>"
     first = False
 
-updated = datetime.datetime.now(datetime.timezone.utc).strftime("%B %d, %Y")
+fetchedText = trending.get("fetchedAt")
+try:
+    fetched = datetime.datetime.fromisoformat(fetchedText)
+except (TypeError, ValueError):
+    fetched = datetime.datetime.now(datetime.timezone.utc)
+fetched = fetched.astimezone(datetime.timezone.utc)
+fetchedIso = fetched.isoformat(timespec="seconds").replace("+00:00", "Z")
+fetchedAt = fetched.strftime("%B %d, %Y at %H:%M UTC")
 
 with open("Template.html") as file:
     template = file.read()
 
-page = template.replace("{{tabs}}", tabs).replace("{{panels}}", panels).replace("{{updated}}", updated)
+page = template.replace("{{tabs}}", tabs).replace("{{panels}}", panels).replace("{{fetchedIso}}", fetchedIso).replace("{{fetchedAt}}", fetchedAt)
 
 os.makedirs("docs", exist_ok=True)
 with open("docs/index.html", "w") as file:

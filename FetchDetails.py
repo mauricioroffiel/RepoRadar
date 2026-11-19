@@ -114,8 +114,8 @@ with open("trending.json") as file:
     trending = json.load(file)
 
 allRepos = {}
-for period in trending:
-    for repo in trending[period]:
+for period in ["weekly", "monthly"]:
+    for repo in trending.get(period, []):
         allRepos[repo["name"]] = repo
 
 os.makedirs("analysis", exist_ok=True)

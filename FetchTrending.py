@@ -1,3 +1,4 @@
+import datetime
 import json
 import os
 import requests
@@ -99,6 +100,9 @@ trending = {}
 for period in periods:
     trending[period] = fetchTrending(period)
     print(period + ": " + str(len(trending[period])) + " repos")
+
+# Exact moment the lists were read from GitHub, in UTC
+trending["fetchedAt"] = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
 
 with open("trending.json", "w") as file:
     json.dump(trending, file, indent=2, ensure_ascii=False)
