@@ -7,7 +7,12 @@
       "language": "TypeScript",
       "stars": 8832,
       "gained": 7257,
-      "avatar": "https://avatars.githubusercontent.com/u/1778935?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/1778935?v=4",
+      "creator": {
+        "login": "paulirish",
+        "avatar": "https://avatars.githubusercontent.com/u/39191?v=4",
+        "role": "topContributor"
+      }
     },
     {
       "name": "backnotprop/plannotator",
@@ -16,16 +21,26 @@
       "language": "TypeScript",
       "stars": 13451,
       "gained": 3290,
-      "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
+      "creator": {
+        "login": "backnotprop",
+        "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
+        "role": "owner"
+      }
     },
     {
       "name": "meta/astryx",
       "url": "https://github.com/meta/astryx",
       "description": "An open source design system that's fully customizable and agent ready",
       "language": "TypeScript",
-      "stars": 30569,
+      "stars": 30568,
       "gained": 6250,
-      "avatar": "https://avatars.githubusercontent.com/u/69631?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/69631?v=4",
+      "creator": {
+        "login": "cixzhang",
+        "avatar": "https://avatars.githubusercontent.com/u/2781099?v=4",
+        "role": "topContributor"
+      }
     },
     {
       "name": "we-promise/sure",
@@ -34,7 +49,12 @@
       "language": "Ruby",
       "stars": 16495,
       "gained": 3866,
-      "avatar": "https://avatars.githubusercontent.com/u/222344567?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/222344567?v=4",
+      "creator": {
+        "login": "jjmata",
+        "avatar": "https://avatars.githubusercontent.com/u/187772?v=4",
+        "role": "topContributor"
+      }
     },
     {
       "name": "alibaba/open-code-review",
@@ -43,25 +63,40 @@
       "language": "Go",
       "stars": 54168,
       "gained": 4383,
-      "avatar": "https://avatars.githubusercontent.com/u/1961952?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/1961952?v=4",
+      "creator": {
+        "login": "lizhengfeng101",
+        "avatar": "https://avatars.githubusercontent.com/u/254839944?v=4",
+        "role": "topContributor"
+      }
     },
     {
       "name": "google-labs-code/stitch-skills",
       "url": "https://github.com/google-labs-code/stitch-skills",
       "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
       "language": "TypeScript",
-      "stars": 10393,
+      "stars": 10395,
       "gained": 1567,
-      "avatar": "https://avatars.githubusercontent.com/u/161364575?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/161364575?v=4",
+      "creator": {
+        "login": "JLXIA",
+        "avatar": "https://avatars.githubusercontent.com/u/43076783?v=4",
+        "role": "topContributor"
+      }
     },
     {
       "name": "tradermonty/claude-trading-skills",
       "url": "https://github.com/tradermonty/claude-trading-skills",
       "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
       "language": "Python",
-      "stars": 7077,
+      "stars": 7078,
       "gained": 3242,
-      "avatar": "https://avatars.githubusercontent.com/u/205491838?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/205491838?v=4",
+      "creator": {
+        "login": "tradermonty",
+        "avatar": "https://avatars.githubusercontent.com/u/205491838?v=4",
+        "role": "owner"
+      }
     },
     {
       "name": "ChromeDevTools/chrome-devtools-mcp",
@@ -70,25 +105,40 @@
       "language": "TypeScript",
       "stars": 58209,
       "gained": 3143,
-      "avatar": "https://avatars.githubusercontent.com/u/11260967?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/11260967?v=4",
+      "creator": {
+        "login": "OrKoN",
+        "avatar": "https://avatars.githubusercontent.com/u/399150?v=4",
+        "role": "topContributor"
+      }
     },
     {
       "name": "anthropics/skills",
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 197204,
+      "stars": 197205,
       "gained": 4381,
-      "avatar": "https://avatars.githubusercontent.com/u/76263028?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
+      "creator": {
+        "login": "rlancemartin",
+        "avatar": "https://avatars.githubusercontent.com/u/122662504?v=4",
+        "role": "topContributor"
+      }
     },
     {
       "name": "ZhuLinsen/daily_stock_analysis",
       "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
       "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
       "language": "Python",
-      "stars": 73346,
+      "stars": 73347,
       "gained": 3566,
-      "avatar": "https://avatars.githubusercontent.com/u/42829555?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/42829555?v=4",
+      "creator": {
+        "login": "ZhuLinsen",
+        "avatar": "https://avatars.githubusercontent.com/u/42829555?v=4",
+        "role": "owner"
+      }
     }
   ],
   "monthly": [
@@ -97,27 +147,42 @@
       "url": "https://github.com/Nutlope/hallmark",
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "language": "CSS",
-      "stars": 57531,
+      "stars": 57533,
       "gained": 27295,
-      "avatar": "https://avatars.githubusercontent.com/u/63742054?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/63742054?v=4",
+      "creator": {
+        "login": "Nutlope",
+        "avatar": "https://avatars.githubusercontent.com/u/63742054?v=4",
+        "role": "owner"
+      }
     },
     {
       "name": "cloudflare/security-audit-skill",
       "url": "https://github.com/cloudflare/security-audit-skill",
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "language": "JavaScript",
-      "stars": 75369,
+      "stars": 75372,
       "gained": 44600,
-      "avatar": "https://avatars.githubusercontent.com/u/314135?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/314135?v=4",
+      "creator": {
+        "login": "literally-dan",
+        "avatar": "https://avatars.githubusercontent.com/u/9935415?v=4",
+        "role": "topContributor"
+      }
     },
     {
       "name": "pingdotgg/t3code",
       "url": "https://github.com/pingdotgg/t3code",
       "description": "The best way to control Claude Code, Codex and more from any computer or phone",
       "language": "TypeScript",
-      "stars": 65230,
+      "stars": 65234,
       "gained": 36872,
-      "avatar": "https://avatars.githubusercontent.com/u/89191727?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/89191727?v=4",
+      "creator": {
+        "login": "juliusmarminge",
+        "avatar": "https://avatars.githubusercontent.com/u/51714798?v=4",
+        "role": "topContributor"
+      }
     },
     {
       "name": "php/php-src",
@@ -126,7 +191,12 @@
       "language": "C",
       "stars": 41809,
       "gained": 1454,
-      "avatar": "https://avatars.githubusercontent.com/u/25158?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/25158?v=4",
+      "creator": {
+        "login": "dstogov",
+        "avatar": "https://avatars.githubusercontent.com/u/2510034?v=4",
+        "role": "topContributor"
+      }
     },
     {
       "name": "milind-soni/OpenMausBot",
@@ -135,16 +205,26 @@
       "language": "TypeScript",
       "stars": 25381,
       "gained": 20270,
-      "avatar": "https://avatars.githubusercontent.com/u/46266943?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/46266943?v=4",
+      "creator": {
+        "login": "milind-soni",
+        "avatar": "https://avatars.githubusercontent.com/u/46266943?v=4",
+        "role": "owner"
+      }
     },
     {
       "name": "anthropics/skills",
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 197204,
+      "stars": 197205,
       "gained": 15769,
-      "avatar": "https://avatars.githubusercontent.com/u/76263028?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
+      "creator": {
+        "login": "rlancemartin",
+        "avatar": "https://avatars.githubusercontent.com/u/122662504?v=4",
+        "role": "topContributor"
+      }
     },
     {
       "name": "thedotmack/claude-mem",
@@ -153,16 +233,26 @@
       "language": "TypeScript",
       "stars": 118238,
       "gained": 17311,
-      "avatar": "https://avatars.githubusercontent.com/u/683968?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/683968?v=4",
+      "creator": {
+        "login": "thedotmack",
+        "avatar": "https://avatars.githubusercontent.com/u/683968?v=4",
+        "role": "owner"
+      }
     },
     {
       "name": "pbakaus/impeccable",
       "url": "https://github.com/pbakaus/impeccable",
       "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
       "language": "Rust",
-      "stars": 112897,
+      "stars": 112899,
       "gained": 30662,
-      "avatar": "https://avatars.githubusercontent.com/u/43004?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/43004?v=4",
+      "creator": {
+        "login": "pbakaus",
+        "avatar": "https://avatars.githubusercontent.com/u/43004?v=4",
+        "role": "owner"
+      }
     },
     {
       "name": "backnotprop/plannotator",
@@ -171,16 +261,26 @@
       "language": "TypeScript",
       "stars": 13451,
       "gained": 3868,
-      "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
+      "creator": {
+        "login": "backnotprop",
+        "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
+        "role": "owner"
+      }
     },
     {
       "name": "HKUDS/DeepTutor",
       "url": "https://github.com/HKUDS/DeepTutor",
       "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
       "language": "Python",
-      "stars": 60482,
+      "stars": 60483,
       "gained": 19065,
-      "avatar": "https://avatars.githubusercontent.com/u/118165258?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/118165258?v=4",
+      "creator": {
+        "login": "pancacake",
+        "avatar": "https://avatars.githubusercontent.com/u/150592536?v=4",
+        "role": "topContributor"
+      }
     }
   ]
 }

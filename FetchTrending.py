@@ -21,18 +21,39 @@ token = os.environ.get("GITHUB_TOKEN", "")
 apiHeaders = {"User-Agent": "RepoRadar", "Accept": "application/vnd.github+json"}
 if token != "":
     apiHeaders["Authorization"] = "Bearer " + token
-avatarCache = {}
+ownerCache = {}
 
 
-def avatarFor(owner):
-    # The API gives the real avatar (by numeric id) for both users and organizations
-    if owner not in avatarCache:
-        avatar = "https://github.com/" + owner + ".png"
-        response = requests.get("https://api.github.com/users/" + owner, headers=apiHeaders)
-        if response.status_code == 200:
-            avatar = response.json().get("avatar_url") or avatar
-        avatarCache[owner] = avatar
-    return avatarCache[owner]
+def getApi(path):
+    response = requests.get("https://api.github.com/" + path, headers=apiHeaders)
+    if response.status_code != 200:
+        return None
+    return response.json()
+
+
+def ownerInfo(owner):
+    # Real avatar (by numeric id) and account type for a user or organization
+    if owner not in ownerCache:
+        info = getApi("users/" + owner) or {}
+        ownerCache[owner] = {
+            "avatar": info.get("avatar_url") or "https://github.com/" + owner + ".png",
+            "isOrganization": info.get("type") == "Organization",
+        }
+    return ownerCache[owner]
+
+
+def creatorFor(repoName):
+    # The API has no "creator" field: a personal repo's creator is its owner,
+    # an organization repo shows the person with the most commits instead
+    owner = repoName.split("/")[0]
+    info = ownerInfo(owner)
+    if not info["isOrganization"]:
+        return {"login": owner, "avatar": info["avatar"], "role": "owner"}
+    contributors = getApi("repos/" + repoName + "/contributors?per_page=10") or []
+    for person in contributors:
+        if person.get("type") == "User" and not person.get("login", "").endswith("[bot]"):
+            return {"login": person["login"], "avatar": person["avatar_url"], "role": "topContributor"}
+    return {"login": owner, "avatar": info["avatar"], "role": "owner"}
 
 
 def fetchTrending(period):
@@ -67,7 +88,8 @@ def fetchTrending(period):
             "language": language,
             "stars": stars,
             "gained": gained,
-            "avatar": avatarFor(name.split("/")[0]),
+            "avatar": ownerInfo(name.split("/")[0])["avatar"],
+            "creator": creatorFor(name),
         })
 
     return repos

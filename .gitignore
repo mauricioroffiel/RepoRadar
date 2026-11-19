@@ -1,3 +1,4 @@
 pending/
 __pycache__/
 .venv/
+.hallmark/

@@ -37,53 +37,82 @@ def formatNumber(number):
     return "{:,}".format(number)
 
 
+emptyValues = ("—", "-", "", "none", "n/a")
+
+
 def buildStack(analysis):
     stack = analysis.get("stack", {})
     rows = ""
     for key, label in layers:
-        value = stack.get(key) or "—"
-        emptyClass = " empty" if value.strip() in ("—", "-", "", "None", "none") else ""
-        rows += '<div class="layer' + emptyClass + '"><dt>' + label + "</dt><dd>" + safe(value) + "</dd></div>"
+        value = (stack.get(key) or "").strip()
+        if value.lower() in emptyValues:
+            rows += '<div class="layer empty"><dt>' + label + "</dt><dd>None listed</dd></div>"
+        else:
+            rows += '<div class="layer"><dt>' + label + "</dt><dd>" + safe(value) + "</dd></div>"
     return '<dl class="stack">' + rows + "</dl>"
 
 
-def buildChips(analysis):
-    chips = ""
+def buildTags(analysis):
+    tags = ""
     for tech in analysis.get("technologies", [])[:8]:
-        chips += '<li>' + safe(tech) + "</li>"
-    if chips == "":
+        tags += "<li>" + safe(tech) + "</li>"
+    if tags == "":
         return ""
-    return '<ul class="chips">' + chips + "</ul>"
+    return '<ul class="tags" aria-label="Key technologies">' + tags + "</ul>"
+
+
+def withSize(url, size):
+    return url + ("&" if "?" in url else "?") + "s=" + str(size)
+
+
+def buildCreator(repo, owner):
+    creator = repo.get("creator") or {"login": owner, "avatar": repo.get("avatar"), "role": "owner"}
+    login = creator.get("login") or owner
+    avatar = creator.get("avatar") or "https://github.com/" + login + ".png"
+    part = '<div class="creator">'
+    part += '<img src="' + safe(withSize(avatar, 96)) + '" alt="" width="48" height="48">'
+    part += '<div class="creatorText">'
+    part += '<a class="creatorName" href="https://github.com/' + safe(login) + '" target="_blank" rel="noopener">' + safe(login) + "</a>"
+    if creator.get("role") == "topContributor":
+        ownerAvatar = repo.get("avatar") or "https://github.com/" + owner + ".png"
+        part += '<span class="creatorRole">Top contributor at '
+        part += '<a class="org" href="https://github.com/' + safe(owner) + '" target="_blank" rel="noopener">'
+        part += '<img src="' + safe(withSize(ownerAvatar, 40)) + '" alt="" width="16" height="16">' + safe(owner) + "</a></span>"
+    else:
+        part += '<span class="creatorRole">Created the repo</span>'
+    part += "</div></div>"
+    return part
 
 
 def buildCard(position, repo, period):
     analysis = loadAnalysis(repo["name"])
     owner, project = repo["name"].split("/", 1)
+    headingId = "repo-" + period + "-" + str(position)
 
-    card = '<article class="card">'
-    card += '<header class="cardHead">'
-    card += '<span class="rank">' + str(position) + "</span>"
-    avatarUrl = repo.get("avatar") or "https://github.com/" + owner + ".png"
-    avatarUrl += ("&" if "?" in avatarUrl else "?") + "s=96"
-    card += '<a class="avatar" href="https://github.com/' + safe(owner) + '" target="_blank" rel="noopener">'
-    card += '<img src="' + safe(avatarUrl) + '" alt="' + safe(owner) + '" width="40" height="40"></a>'
-    card += '<div class="title"><a href="' + safe(repo["url"]) + '" target="_blank" rel="noopener">'
-    card += '<span class="owner">' + safe(owner) + ' /</span> <span class="project">' + safe(project) + "</span></a>"
-    card += '<div class="meta">'
+    card = '<article class="repo" aria-labelledby="' + headingId + '">'
+    card += '<div class="repoId">'
+    card += '<span class="rank num" aria-hidden="true">' + str(position) + "</span>"
+    card += '<div class="repoName">'
+    card += '<h2 id="' + headingId + '"><a href="' + safe(repo["url"]) + '" target="_blank" rel="noopener">' + safe(project) + "</a></h2>"
+    card += '<p class="meta"><span>by ' + safe(owner) + "</span>"
     if repo.get("language"):
-        card += '<span>' + safe(repo["language"]) + "</span>"
-    card += '<span>★ ' + formatNumber(repo.get("stars", 0)) + "</span>"
-    card += '<span class="gained">+' + formatNumber(repo.get("gained", 0)) + " " + gainedLabels[period] + "</span>"
-    card += "</div></div></header>"
+        card += "<span>" + safe(repo["language"]) + "</span>"
+    card += '<span class="num">' + formatNumber(repo.get("stars", 0)) + " stars</span>"
+    card += '<span class="gained num">+' + formatNumber(repo.get("gained", 0)) + " " + gainedLabels[period] + "</span>"
+    card += "</p></div>"
+    card += buildCreator(repo, owner)
+    card += "</div>"
 
     if analysis is None:
-        card += '<p class="description">' + safe(repo.get("description")) + "</p>"
-        card += '<p class="waiting">Analysis coming in the next run.</p>'
+        card += '<div class="repoText"><p>' + safe(repo.get("description")) + "</p>"
+        card += '<p class="waiting">Analysis coming in the next run.</p></div>'
     else:
+        card += '<div class="repoText">'
         card += '<section><h3>What it solves</h3><p>' + safe(analysis.get("problem")) + "</p></section>"
-        card += '<section><h3>Stack</h3>' + buildStack(analysis) + "</section>"
-        card += '<section class="new"><h3>What\'s new here</h3><p>' + safe(analysis.get("whatsNew")) + "</p></section>"
-        card += buildChips(analysis)
+        card += '<section><h3>What’s new here</h3><p>' + safe(analysis.get("whatsNew")) + "</p></section>"
+        card += buildTags(analysis)
+        card += "</div>"
+        card += '<section class="repoStack"><h3>Stack</h3>' + buildStack(analysis) + "</section>"
 
     card += "</article>"
     return card
@@ -105,7 +134,7 @@ for period in ["weekly", "monthly"]:
     for repo in repos:
         cards += buildCard(position, repo, period)
         position = position + 1
-    panels += '<section role="tabpanel" id="panel-' + period + '" aria-labelledby="tab-' + period + '" class="grid"' + hidden + ">" + cards + "</section>"
+    panels += '<section role="tabpanel" id="panel-' + period + '" aria-labelledby="tab-' + period + '" class="repoList"' + hidden + ">" + cards + "</section>"
     first = False
 
 updated = datetime.datetime.now(datetime.timezone.utc).strftime("%B %d, %Y")
