@@ -147,7 +147,7 @@
       "url": "https://github.com/Nutlope/hallmark",
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "language": "CSS",
-      "stars": 57601,
+      "stars": 57602,
       "gained": 27295,
       "avatar": "https://avatars.githubusercontent.com/u/63742054?v=4",
       "creator": {
@@ -283,7 +283,7 @@
       }
     }
   ],
-  "fetchedAt": "2026-11-19T03:41:38+00:00",
+  "fetchedAt": "2026-11-19T03:42:21+00:00",
   "previous": {
     "fetchedAt": "2026-11-19T00:07:00+00:00",
     "weekly": [
