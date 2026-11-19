@@ -63,6 +63,9 @@ def buildCard(position, repo, period):
     card = '<article class="card">'
     card += '<header class="cardHead">'
     card += '<span class="rank">' + str(position) + "</span>"
+    avatarUrl = "https://github.com/" + owner + ".png?size=96"
+    card += '<a class="avatar" href="https://github.com/' + safe(owner) + '" target="_blank" rel="noopener">'
+    card += '<img src="' + safe(avatarUrl) + '" alt="' + safe(owner) + '" width="40" height="40" loading="lazy"></a>'
     card += '<div class="title"><a href="' + safe(repo["url"]) + '" target="_blank" rel="noopener">'
     card += '<span class="owner">' + safe(owner) + ' /</span> <span class="project">' + safe(project) + "</span></a>"
     card += '<div class="meta">'
@@ -92,7 +95,7 @@ tabs = ""
 panels = ""
 first = True
 for period in ["weekly", "monthly"]:
-    repos = trending.get(period, [])
+    repos = sorted(trending.get(period, []), key=lambda repo: repo.get("gained", 0), reverse=True)
     selected = "true" if first else "false"
     hidden = "" if first else " hidden"
     tabs += '<button role="tab" id="tab-' + period + '" aria-controls="panel-' + period + '" aria-selected="' + selected + '">' + tabNames[period] + "</button>"
