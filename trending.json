@@ -19,7 +19,7 @@
       "url": "https://github.com/backnotprop/plannotator",
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "language": "TypeScript",
-      "stars": 13451,
+      "stars": 13452,
       "gained": 3290,
       "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
       "creator": {
@@ -117,7 +117,7 @@
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 197205,
+      "stars": 197206,
       "gained": 4381,
       "avatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
       "creator": {
@@ -147,7 +147,7 @@
       "url": "https://github.com/Nutlope/hallmark",
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "language": "CSS",
-      "stars": 57533,
+      "stars": 57534,
       "gained": 27295,
       "avatar": "https://avatars.githubusercontent.com/u/63742054?v=4",
       "creator": {
@@ -161,7 +161,7 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "language": "JavaScript",
-      "stars": 75372,
+      "stars": 75374,
       "gained": 44600,
       "avatar": "https://avatars.githubusercontent.com/u/314135?v=4",
       "creator": {
@@ -175,7 +175,7 @@
       "url": "https://github.com/pingdotgg/t3code",
       "description": "The best way to control Claude Code, Codex and more from any computer or phone",
       "language": "TypeScript",
-      "stars": 65234,
+      "stars": 65236,
       "gained": 36872,
       "avatar": "https://avatars.githubusercontent.com/u/89191727?v=4",
       "creator": {
@@ -203,7 +203,7 @@
       "url": "https://github.com/milind-soni/OpenMausBot",
       "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
       "language": "TypeScript",
-      "stars": 25381,
+      "stars": 25382,
       "gained": 20270,
       "avatar": "https://avatars.githubusercontent.com/u/46266943?v=4",
       "creator": {
@@ -217,7 +217,7 @@
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 197205,
+      "stars": 197206,
       "gained": 15769,
       "avatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
       "creator": {
@@ -259,7 +259,7 @@
       "url": "https://github.com/backnotprop/plannotator",
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "language": "TypeScript",
-      "stars": 13451,
+      "stars": 13452,
       "gained": 3868,
       "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
       "creator": {
@@ -273,7 +273,7 @@
       "url": "https://github.com/HKUDS/DeepTutor",
       "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
       "language": "Python",
-      "stars": 60483,
+      "stars": 60484,
       "gained": 19065,
       "avatar": "https://avatars.githubusercontent.com/u/118165258?v=4",
       "creator": {
