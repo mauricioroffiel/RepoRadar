@@ -1,0 +1,12 @@
+{
+  "problem": "Coding agents often write old-style web code because their training data is full of legacy patterns. This project gives agents up-to-date web best-practice guides for developers using them.",
+  "stack": {
+    "frontend": "Evaluation dashboard served with Playwright tests (details not stated)",
+    "backend": "TypeScript on Node.js (22.18 or newer) with a CLI called gd, managed with pnpm",
+    "database": "—",
+    "ai": "Skills for coding agents, a RAG-style guide search with benchmarks, and LLM graders and eval harnesses",
+    "deploy": "npm package run with npx (modern-web-guidance CLI), skills published for agents, and a dashboard on GitHub Pages"
+  },
+  "whatsNew": "Instead of relying on what the model remembers, it retrieves short expert-written guides into the agent's context. Guides are pruned using evals so only content models do not already know is kept.",
+  "technologies": ["TypeScript", "Node.js", "pnpm", "Playwright", "Agent skills", "RAG search", "CLI", "oxlint"]
+}

@@ -1,0 +1,12 @@
+{
+  "problem": "Developers using several coding agents have no single fast place to control them, especially from a phone. T3 Code is an open-source interface that runs agents on your machine.",
+  "stack": {
+    "frontend": "Web app, desktop app and iOS and Android apps (frameworks not stated)",
+    "backend": "TypeScript monorepo with a local server, built with the Effect library, plus a small Rust resource monitor",
+    "database": "—",
+    "ai": "Claude Code, Codex, Cursor, OpenCode, Grok Build, Kiro, Pi and any ACP agent; MCP for outside agents",
+    "deploy": "Desktop installers (brew, winget, deb), a t3 CLI via npx or install script, and mobile apps"
+  },
+  "whatsNew": "One server holds every thread, so you can start at your desk and approve the next step from your phone, and switch agents mid-thread. It drives your existing agent logins instead of reselling tokens.",
+  "technologies": ["TypeScript", "Effect", "Rust", "ACP", "MCP", "Git worktrees", "Desktop app", "Mobile apps"]
+}

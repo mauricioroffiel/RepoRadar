@@ -1,0 +1,12 @@
+{
+  "problem": "AI coding agents cannot see what happens inside a real browser, so they struggle to debug pages or measure speed. This tool lets agents control and inspect a live Chrome browser.",
+  "stack": {
+    "frontend": "—",
+    "backend": "TypeScript on Node.js, using Puppeteer to drive Chrome and the Model Context Protocol (MCP)",
+    "database": "—",
+    "ai": "Works with MCP-compatible coding agents such as Claude, Cursor, Copilot and Gemini; includes Gemini-based evaluation scripts",
+    "deploy": "npm package run with npx (MCP server and CLI), plus plugin manifests for Claude, Cursor and Gemini"
+  },
+  "whatsNew": "It gives an AI agent the real Chrome DevTools abilities (performance traces, network and console inspection, source-mapped stack traces) instead of just clicking pages. It is offered both as an MCP server and as a CLI.",
+  "technologies": ["TypeScript", "Node.js", "Puppeteer", "MCP", "Chrome DevTools", "Lighthouse", "npm", "GN/Ninja build"]
+}

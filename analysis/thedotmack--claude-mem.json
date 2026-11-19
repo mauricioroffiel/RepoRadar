@@ -1,0 +1,12 @@
+{
+  "problem": "Coding agents forget everything between sessions and repeat work and mistakes. Claude-Mem saves notes about what the agent did and gives them back in later sessions.",
+  "stack": {
+    "frontend": "—",
+    "backend": "TypeScript on Node.js and Bun, as a plugin with a worker service and HTTP server",
+    "database": "SQLite locally; ChromaDB for embeddings; Postgres and Valkey with BullMQ in the optional server-beta setup",
+    "ai": "Claude Agent SDK with a second observer agent that compresses notes; works with Claude Code, Codex, Cursor, OpenCode and more; MCP",
+    "deploy": "npm package (npx claude-mem install), Claude Code plugin marketplace, Docker Compose for server-beta"
+  },
+  "whatsNew": "A second agent watches the session and writes compressed notes, and the next session starts with a short index and loads details only when needed. Memory stays in ~/.claude-mem on your machine.",
+  "technologies": ["TypeScript", "Bun", "SQLite", "ChromaDB", "Claude Agent SDK", "MCP", "Postgres", "BullMQ"]
+}

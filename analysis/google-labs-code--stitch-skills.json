@@ -1,0 +1,12 @@
+{
+  "problem": "Coding agents need guidance to use Google Stitch, a UI design tool, well. This library of skills teaches agents to design and build with Stitch for developers.",
+  "stack": {
+    "frontend": "—",
+    "backend": "TypeScript tooling; skills need the Stitch MCP server",
+    "database": "—",
+    "ai": "Agent Skills for Codex, Antigravity, Gemini CLI, Claude Code, Cursor and OpenCode, via the Stitch MCP server",
+    "deploy": "Plugin marketplaces (for example Codex) pulled from the GitHub repo, or manual install"
+  },
+  "whatsNew": "Skills follow the open Agent Skills standard and are grouped into plugins (design, build, utilities) that many different agents can install. They work through the Stitch MCP server.",
+  "technologies": ["Agent Skills", "MCP", "Stitch", "TypeScript", "Codex plugins", "Gemini CLI"]
+}

@@ -1,0 +1,12 @@
+{
+  "problem": "Security-auditing a codebase with an AI agent can produce unverified or made-up findings. This skill gives an agent a structured, multi-phase audit process for people reviewing a repo.",
+  "stack": {
+    "frontend": "—",
+    "backend": "Markdown prompt files and JavaScript (.cjs) validation scripts",
+    "database": "—",
+    "ai": "Coding-agent skill that runs many isolated agents (hunters, verifiers)",
+    "deploy": "Agent skill folder (skills/security-audit) added to a coding agent"
+  },
+  "whatsNew": "Every candidate bug goes to a fresh verifier that tries to disprove it, and results are saved as machine-checked records with a JSON schema. A coverage ledger tracks which parts were checked, and later runs add to earlier ones.",
+  "technologies": ["Agent skills", "JavaScript", "JSON Schema", "Multi-agent workflows", "Security auditing"]
+}

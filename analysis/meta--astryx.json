@@ -1,0 +1,12 @@
+{
+  "problem": "Teams need a consistent, customisable set of UI components, now also usable by AI assistants. Astryx is an open design system for React developers and their agents.",
+  "stack": {
+    "frontend": "React 19+ with StyleX styles; works with Next.js, Vite, Tailwind or a CDN; has a native package",
+    "backend": "TypeScript with Node.js scripts and a CLI, in a pnpm monorepo",
+    "database": "—",
+    "ai": "CLI and docs designed so AI assistants and people use the same reference",
+    "deploy": "npm packages (@astryxdesign/core, themes, CLI), with docs, Storybook and a sandbox site"
+  },
+  "whatsNew": "Themes are just CSS custom property overrides, and consumers need no build plugin or styling library. A swizzle command ejects a component's full source into your project.",
+  "technologies": ["React", "StyleX", "TypeScript", "pnpm", "CSS variables", "Storybook", "CLI", "Vega charts"]
+}

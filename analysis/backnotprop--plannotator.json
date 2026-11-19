@@ -1,0 +1,12 @@
+{
+  "problem": "When coding agents work on their own, it is hard to review their plans and code and give clear feedback. Plannotator is a browser-based review space where developers mark up agent output and send it back.",
+  "stack": {
+    "frontend": "Browser review app (framework not stated), plus a VS Code extension and a terminal UI",
+    "backend": "TypeScript monorepo run with Bun, with local server and agent plugins/hooks",
+    "database": "—",
+    "ai": "Works with Claude Code, Codex, Copilot CLI, Gemini CLI, OpenCode, Pi and others via plugins, hooks and MCP",
+    "deploy": "Local CLI (plannotator), agent plugins, VS Code extension, Homebrew TUI"
+  },
+  "whatsNew": "Your comments on a plan, HTML page, live site or diff go straight back to the agent as its next message, and an Inbox lets agents leave questions without holding a session open. A guided review can sort a big diff into chapters.",
+  "technologies": ["TypeScript", "Bun", "MCP", "Claude Code", "Git/GitHub/GitLab", "VS Code extension", "Agent plugins", "Obsidian"]
+}

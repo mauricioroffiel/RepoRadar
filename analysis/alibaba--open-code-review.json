@@ -1,0 +1,12 @@
+{
+  "problem": "Reviewing code changes by hand is slow, and general AI agents often skip files or point to the wrong lines. This CLI reviews Git diffs for developers and CI pipelines with line-level comments.",
+  "stack": {
+    "frontend": "Terminal UI built with Bubble Tea, Lip Gloss and Glamour",
+    "backend": "Go with Cobra CLI",
+    "database": "—",
+    "ai": "OpenAI and Anthropic compatible LLMs (also AWS config), a tool-using agent, MCP Go SDK, tiktoken token counting",
+    "deploy": "CLI tool (npm package.json also present)"
+  },
+  "whatsNew": "It mixes fixed code logic with an LLM agent: code, not the model, picks files, bundles related ones and matches rules, and each bundle runs in a sub-agent. This is meant to avoid missed files and line drift, and uses about 1/9 of the tokens in its benchmark against Claude Code.",
+  "technologies": ["Go", "Cobra", "Bubble Tea", "OpenAI SDK", "Anthropic SDK", "MCP", "Git diff", "Sub-agents"]
+}

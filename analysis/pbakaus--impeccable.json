@@ -1,0 +1,12 @@
+{
+  "problem": "AI coding agents keep producing the same generic-looking designs and lack words for design feedback. Impeccable gives them design commands, reviews and a detector for such patterns.",
+  "stack": {
+    "frontend": "—",
+    "backend": "Rust engine (Cargo workspace) with Node.js tooling and a launcher script",
+    "database": "—",
+    "ai": "Skill and slash commands for Claude Code, Cursor, Codex CLI, Gemini CLI, Copilot and many other agents",
+    "deploy": "npm package (npx impeccable install) that installs the skill into your agent"
+  },
+  "whatsNew": "It offers 24 named commands like bolder, quieter, critique and audit, plus 62 fixed rules that flag AI-style design tells with no LLM or API key. A PRODUCT.md file records project context for later commands.",
+  "technologies": ["Rust", "Cargo", "Node.js", "Agent skills", "npm", "CSS", "HTML", "Linting"]
+}

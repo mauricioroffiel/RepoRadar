@@ -1,0 +1,12 @@
+{
+  "problem": "Personal AI agent apps are closed and tied to one company's models and cloud. OpenMausBot is a local-first chat app where you run a team of AI bots on your own machine.",
+  "stack": {
+    "frontend": "Vite-built chat app inside an Electron desktop app",
+    "backend": "TypeScript on Node.js 24+ with a local harness server on 127.0.0.1, managed with pnpm",
+    "database": "Local files in ~/.openmausbot (no database stated)",
+    "ai": "Claude, Codex and Grok CLIs as agents, MCP server, Composio apps, computer-use with browsers and virtual machines",
+    "deploy": "Electron desktop installers (macOS, Windows, Ubuntu) and a Docker image with Caddy for self-hosting"
+  },
+  "whatsNew": "Each bot is a real agent running your own installed CLI, with its own personality, model and Linux computer, shown like a messaging contact. Approval cards let you confirm risky actions.",
+  "technologies": ["TypeScript", "Electron", "Node.js", "Vite", "Docker", "Caddy", "MCP", "Claude Code"]
+}

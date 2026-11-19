@@ -1,0 +1,12 @@
+{
+  "problem": "Web pages made by AI coding assistants tend to look generic and machine-made. Hallmark is a design skill that helps assistants produce pages that look designed.",
+  "stack": {
+    "frontend": "Generated self-contained HTML and CSS pages",
+    "backend": "Node.js scripts (theme dealing and a linter called sloplint)",
+    "database": "—",
+    "ai": "Skill for Claude Code, Codex, Cursor and OpenCode, with subagent review",
+    "deploy": "Agent skill package (npm files) installed into coding assistants; a small static site served with Python"
+  },
+  "whatsNew": "It deals three themes from a catalog of fifty, builds the hero alone, then lints the page in a real browser at eight widths against rules that catch common AI design tells. A subagent then reviews it with fresh eyes.",
+  "technologies": ["Agent skills", "HTML", "CSS", "Node.js", "OKLCH colour", "Claude Code", "Codex", "Cursor"]
+}

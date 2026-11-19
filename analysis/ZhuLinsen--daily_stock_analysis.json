@@ -1,0 +1,12 @@
+{
+  "problem": "Individual investors have to check many data sources and news every day. This system uses an LLM to analyse a watchlist of stocks and push a daily decision dashboard.",
+  "stack": {
+    "frontend": "Web and desktop workbench (framework not stated)",
+    "backend": "Python with FastAPI service, SQLAlchemy, schedule and pandas",
+    "database": "SQL database through SQLAlchemy (type not stated)",
+    "ai": "LLMs such as Gemini, OpenAI-compatible APIs, DeepSeek, Qwen, Claude and Ollama; agent strategies for follow-up questions",
+    "deploy": "GitHub Actions scheduled runs, Docker, local scheduled tasks, and a desktop app"
+  },
+  "whatsNew": "It chains many free market data sources with automatic fallback by priority, adds news search, and runs on GitHub Actions at zero cost. Results are pushed to chat apps like WeCom, Feishu, Telegram, Discord, Slack and email.",
+  "technologies": ["Python", "FastAPI", "SQLAlchemy", "pandas", "AkShare", "yfinance", "GitHub Actions", "LLM agents"]
+}

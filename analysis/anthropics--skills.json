@@ -1,0 +1,12 @@
+{
+  "problem": "General AI models are not reliably good at specialised, repeatable tasks like making documents or testing web apps. This repo is a collection of example Agent Skills that teach Claude those tasks, for Claude users and skill authors.",
+  "stack": {
+    "frontend": "—",
+    "backend": "Python helper scripts and Markdown instruction files (SKILL.md)",
+    "database": "—",
+    "ai": "Claude (Claude Code, Claude.ai and the Claude API) using the Agent Skills standard",
+    "deploy": "Claude Code plugin marketplace, plus use in Claude.ai and the API"
+  },
+  "whatsNew": "Each skill is just a folder with instructions, scripts and resources that Claude loads only when needed, instead of baking everything into one long prompt. The repo also includes the skills behind Claude's document features (docx, pdf, pptx, xlsx).",
+  "technologies": ["Agent Skills", "Claude", "Claude Code plugins", "Python", "Markdown", "MCP"]
+}

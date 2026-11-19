@@ -1,0 +1,12 @@
+{
+  "problem": "Learners need a tutor that adapts to them over time. DeepTutor is an AI learning companion that answers from your own documents and tracks your progress.",
+  "stack": {
+    "frontend": "Next.js web app, plus desktop app previews",
+    "backend": "Python 3.11+ with FastAPI, Typer CLI, aiohttp, httpx and Pydantic",
+    "database": "SQLite (optionally PocketBase) and FAISS and LightRAG for retrieval",
+    "ai": "OpenAI SDK and many providers, multi-agent collaboration, RAG, MCP, optional Claude Agent SDK",
+    "deploy": "Docker and docker-compose (multi-stage image), a deeptutor CLI, and desktop downloads"
+  },
+  "whatsNew": "It is agent-native: a CLI and agents can drive the tutor, and it builds a long-term learning record with notebooks, quizzes and video lessons. Optional modules are installed separately.",
+  "technologies": ["Python", "FastAPI", "Next.js", "RAG", "FAISS", "LightRAG", "SQLite", "Docker"]
+}

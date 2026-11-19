@@ -1,0 +1,12 @@
+{
+  "problem": "People want a personal finance and wealth app they can run themselves. Sure is a community fork of the abandoned Maybe Finance app, for everyday users and self-hosters.",
+  "stack": {
+    "frontend": "Rails views with Hotwire (Turbo and Stimulus), ViewComponent, Tailwind CSS and importmap",
+    "backend": "Ruby on Rails 8.1 with Puma, Sidekiq background jobs, Stripe and Plaid gems",
+    "database": "PostgreSQL and Redis",
+    "ai": "—",
+    "deploy": "Docker (self-hosting guide) with a Dockerfile; Sentry monitoring"
+  },
+  "whatsNew": "It keeps a once-commercial, nearly million-dollar finance codebase alive as a community project under AGPLv3. It can be fully self-hosted with Docker.",
+  "technologies": ["Ruby", "Rails", "Hotwire", "Tailwind CSS", "PostgreSQL", "Redis", "Sidekiq", "Docker"]
+}

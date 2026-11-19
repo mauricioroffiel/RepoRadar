@@ -1,0 +1,12 @@
+{
+  "problem": "Web developers need a fast, general-purpose scripting language to build websites. This repo is the source code of the PHP interpreter itself.",
+  "stack": {
+    "frontend": "—",
+    "backend": "C code: the Zend engine, core, extensions and server APIs, built with autoconf and make",
+    "database": "—",
+    "ai": "—",
+    "deploy": "Built from source and installed; distributed as a language runtime under the BSD-3-Clause license"
+  },
+  "whatsNew": "It is the reference implementation of PHP, with the Zend engine at its core and many extensions that can be added. It has a large test suite run with its own test tool.",
+  "technologies": ["C", "PHP", "Zend Engine", "autoconf", "Make", "PHP extensions"]
+}

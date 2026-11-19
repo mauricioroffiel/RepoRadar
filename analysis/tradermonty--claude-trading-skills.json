@@ -1,0 +1,12 @@
+{
+  "problem": "Busy individual investors need a structured way to review markets, manage risk, plan trades and learn from them. This is a set of Claude skills for that workflow, not a signal service.",
+  "stack": {
+    "frontend": "—",
+    "backend": "Python 3.11+ scripts (yfinance, scipy, requests, jsonschema) with YAML workflow files",
+    "database": "—",
+    "ai": "Claude Skills for Claude Code",
+    "deploy": "Skill folders used from the repo, with a documentation website"
+  },
+  "whatsNew": "Machine-readable workflow manifests list the exact skills, decision gates and outputs in order, such as a daily market check or a trade memory loop. Risk checks come before looking for trade candidates.",
+  "technologies": ["Python", "Claude Skills", "YAML workflows", "yfinance", "SciPy", "Financial Modeling Prep API", "pytest", "ruff"]
+}
