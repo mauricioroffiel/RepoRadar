@@ -29,6 +29,7 @@
   --color-focus: #0f7a5c;
   --color-field: #1d1c19; --color-field-ink: #f4f2ec;
   --color-mark: #0f7a5c; --color-mark-ink: #fffdf8;
+  --color-up: #1a7f37; --color-down: #c62828;
   --font-display: "Radio Canada Big", ui-sans-serif, system-ui, sans-serif; --font-body: "Radio Canada", ui-sans-serif, system-ui, sans-serif;
   --radius-card: 0; --rule-hair: 1px;
   --tracking-display: -0.035em; --display-weight: 700;
@@ -41,6 +42,7 @@
     --color-focus: #4fd1a5;
     --color-field: #17302a; --color-field-ink: #ecebe6;
     --color-mark: #4fd1a5; --color-mark-ink: #121311;
+    --color-up: #5fd38d; --color-down: #ff7b72;
   }
 }
 
@@ -99,6 +101,13 @@ button { font: inherit; }
 @media (min-width: 72rem) { .repo { grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 4fr); } .repoStack { grid-column: auto; } }
 
 .repoId { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: var(--space-md) var(--space-sm); align-content: start; }
+.rankBox { display: grid; gap: var(--space-2xs); align-content: start; justify-items: start; }
+.move { font-size: var(--text-sm); font-weight: 500; white-space: nowrap; }
+.move.up { color: var(--color-up); }
+.move.down { color: var(--color-down); }
+.move.same { color: var(--color-muted); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.movesNote { margin-top: var(--space-sm); font-size: var(--text-sm); color: var(--color-muted); }
 .rank { font: var(--display-weight) var(--text-4xl)/0.9 var(--font-display); letter-spacing: var(--tracking-display); }
 .repoName h2 { font-size: var(--text-xl); line-height: 1.15; }
 .repoName h2 a { text-decoration: none; transition: color var(--dur-short) var(--ease-out); }
@@ -141,7 +150,7 @@ footer a:hover { color: var(--color-mark); }
 <header class="topBar">
   <div class="container">
     <span class="wordmark"><span>Repo</span><span>Radar</span></span>
-    <span class="updated">GitHub data taken <time id="fetchedAt" datetime="{{fetchedIso}}">{{fetchedAt}}</time></span>
+    <span class="updated">GitHub data taken <time id="fetchedAt" class="localTime" datetime="{{fetchedIso}}">{{fetchedAt}}</time></span>
   </div>
 </header>
 <section class="intro" aria-labelledby="pageTitle">
@@ -153,6 +162,7 @@ footer a:hover { color: var(--color-mark); }
 <main class="container">
   <div class="bar">
     <div role="tablist" aria-label="Period">{{tabs}}</div>
+    {{movesNote}}
   </div>
   {{panels}}
 </main>
@@ -160,11 +170,12 @@ footer a:hover { color: var(--color-mark); }
   <div class="container">Lists from <a href="https://github.com/trending">GitHub Trending</a>. Analysis written by Claude from each repo’s README, dependency files and file tree, so it can miss things.</div>
 </footer>
 <script>
-var fetched = document.getElementById("fetchedAt");
+document.querySelectorAll(".localTime").forEach(function (fetched) {
 try {
-  // Show the fetch time in the viewer's own time zone; the UTC text stays without scripting
+  // Show times in the viewer's own time zone; the UTC text stays without scripting
   fetched.textContent = new Date(fetched.getAttribute("datetime")).toLocaleString("en-US", { year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" });
 } catch (error) {}
+});
 var tabs = document.querySelectorAll('[role="tab"]');
 tabs.forEach(function (tab) {
   tab.addEventListener("click", function () {

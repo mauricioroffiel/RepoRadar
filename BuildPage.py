@@ -84,6 +84,20 @@ def buildCreator(repo, owner):
     return part
 
 
+def buildMove(position, repo, period):
+    previousOrder = previous.get(period)
+    if not previousOrder:
+        return ""
+    if repo["name"] not in previousOrder:
+        return '<span class="move up">New<span class="visually-hidden"> in the top 10</span></span>'
+    change = previousOrder.index(repo["name"]) + 1 - position
+    if change > 0:
+        return '<span class="move up"><span aria-hidden="true">\u25B2</span> ' + str(change) + '<span class="visually-hidden"> places up</span></span>'
+    if change < 0:
+        return '<span class="move down"><span aria-hidden="true">\u25BC</span> ' + str(-change) + '<span class="visually-hidden"> places down</span></span>'
+    return '<span class="move same"><span aria-hidden="true">=</span><span class="visually-hidden">Same place</span></span>'
+
+
 def buildCard(position, repo, period):
     analysis = loadAnalysis(repo["name"])
     owner, project = repo["name"].split("/", 1)
@@ -91,7 +105,8 @@ def buildCard(position, repo, period):
 
     card = '<article class="repo" aria-labelledby="' + headingId + '">'
     card += '<div class="repoId">'
-    card += '<span class="rank num" aria-hidden="true">' + str(position) + "</span>"
+    card += '<div class="rankBox"><span class="rank num" aria-hidden="true">' + str(position) + "</span>"
+    card += buildMove(position, repo, period) + "</div>"
     card += '<div class="repoName">'
     card += '<h2 id="' + headingId + '"><a href="' + safe(repo["url"]) + '" target="_blank" rel="noopener">' + safe(project) + "</a></h2>"
     card += '<p class="meta"><span>by ' + safe(owner) + "</span>"
@@ -120,6 +135,7 @@ def buildCard(position, repo, period):
 
 with open("trending.json") as file:
     trending = json.load(file)
+previous = trending.get("previous") or {}
 
 tabs = ""
 panels = ""
@@ -146,10 +162,19 @@ fetched = fetched.astimezone(datetime.timezone.utc)
 fetchedIso = fetched.isoformat(timespec="seconds").replace("+00:00", "Z")
 fetchedAt = fetched.strftime("%B %d, %Y at %H:%M UTC")
 
+movesNote = ""
+try:
+    previousTime = datetime.datetime.fromisoformat(previous["fetchedAt"]).astimezone(datetime.timezone.utc)
+    movesNote = '<p class="movesNote">Arrows show the change in place since the lists of '
+    movesNote += '<time class="localTime" datetime="' + previousTime.isoformat(timespec="seconds").replace("+00:00", "Z") + '">'
+    movesNote += previousTime.strftime("%B %d, %Y at %H:%M UTC") + "</time>.</p>"
+except (KeyError, TypeError, ValueError):
+    pass
+
 with open("Template.html") as file:
     template = file.read()
 
-page = template.replace("{{tabs}}", tabs).replace("{{panels}}", panels).replace("{{fetchedIso}}", fetchedIso).replace("{{fetchedAt}}", fetchedAt)
+page = template.replace("{{tabs}}", tabs).replace("{{panels}}", panels).replace("{{movesNote}}", movesNote).replace("{{fetchedIso}}", fetchedIso).replace("{{fetchedAt}}", fetchedAt)
 
 os.makedirs("docs", exist_ok=True)
 with open("docs/index.html", "w") as file:

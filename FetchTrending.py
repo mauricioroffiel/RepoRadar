@@ -96,6 +96,33 @@ def fetchTrending(period):
     return repos
 
 
+def orderOf(repos):
+    # Same order the page shows: most stars gained first
+    ordered = sorted(repos, key=lambda repo: repo.get("gained", 0), reverse=True)
+    return [repo["name"] for repo in ordered]
+
+
+def loadOld():
+    try:
+        with open("trending.json") as file:
+            return json.load(file)
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def previousSnapshot(old, now):
+    # Arrows compare with the last lists of an earlier UTC day, so several runs
+    # on the same day keep showing the change since the day before
+    oldTime = old.get("fetchedAt", "")
+    if oldTime and oldTime[:10] != now[:10]:
+        snapshot = {"fetchedAt": oldTime}
+        for period in periods:
+            snapshot[period] = orderOf(old.get(period, []))
+        return snapshot
+    return old.get("previous")
+
+
+old = loadOld()
 trending = {}
 for period in periods:
     trending[period] = fetchTrending(period)
@@ -103,6 +130,9 @@ for period in periods:
 
 # Exact moment the lists were read from GitHub, in UTC
 trending["fetchedAt"] = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+previous = previousSnapshot(old, trending["fetchedAt"])
+if previous:
+    trending["previous"] = previous
 
 with open("trending.json", "w") as file:
     json.dump(trending, file, indent=2, ensure_ascii=False)

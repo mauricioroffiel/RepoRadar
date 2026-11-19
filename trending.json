@@ -5,7 +5,7 @@
       "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
       "description": "Keep your coding agent up to date with the latest web best practices",
       "language": "TypeScript",
-      "stars": 8865,
+      "stars": 8882,
       "gained": 7257,
       "avatar": "https://avatars.githubusercontent.com/u/1778935?v=4",
       "creator": {
@@ -19,7 +19,7 @@
       "url": "https://github.com/backnotprop/plannotator",
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "language": "TypeScript",
-      "stars": 13476,
+      "stars": 13485,
       "gained": 3290,
       "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
       "creator": {
@@ -33,7 +33,7 @@
       "url": "https://github.com/meta/astryx",
       "description": "An open source design system that's fully customizable and agent ready",
       "language": "TypeScript",
-      "stars": 30617,
+      "stars": 30628,
       "gained": 6250,
       "avatar": "https://avatars.githubusercontent.com/u/69631?v=4",
       "creator": {
@@ -47,7 +47,7 @@
       "url": "https://github.com/we-promise/sure",
       "description": "The personal finance app for everyone (by everyone)",
       "language": "Ruby",
-      "stars": 16520,
+      "stars": 16526,
       "gained": 3866,
       "avatar": "https://avatars.githubusercontent.com/u/222344567?v=4",
       "creator": {
@@ -61,7 +61,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "language": "Go",
-      "stars": 54198,
+      "stars": 54205,
       "gained": 4383,
       "avatar": "https://avatars.githubusercontent.com/u/1961952?v=4",
       "creator": {
@@ -75,7 +75,7 @@
       "url": "https://github.com/google-labs-code/stitch-skills",
       "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
       "language": "TypeScript",
-      "stars": 10429,
+      "stars": 10451,
       "gained": 1567,
       "avatar": "https://avatars.githubusercontent.com/u/161364575?v=4",
       "creator": {
@@ -89,7 +89,7 @@
       "url": "https://github.com/tradermonty/claude-trading-skills",
       "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
       "language": "Python",
-      "stars": 7091,
+      "stars": 7099,
       "gained": 3242,
       "avatar": "https://avatars.githubusercontent.com/u/205491838?v=4",
       "creator": {
@@ -103,7 +103,7 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "description": "Chrome DevTools for coding agents",
       "language": "TypeScript",
-      "stars": 58228,
+      "stars": 58242,
       "gained": 3143,
       "avatar": "https://avatars.githubusercontent.com/u/11260967?v=4",
       "creator": {
@@ -117,7 +117,7 @@
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 197250,
+      "stars": 197272,
       "gained": 4381,
       "avatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
       "creator": {
@@ -131,7 +131,7 @@
       "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
       "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
       "language": "Python",
-      "stars": 73374,
+      "stars": 73389,
       "gained": 3566,
       "avatar": "https://avatars.githubusercontent.com/u/42829555?v=4",
       "creator": {
@@ -147,7 +147,7 @@
       "url": "https://github.com/Nutlope/hallmark",
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "language": "CSS",
-      "stars": 57585,
+      "stars": 57601,
       "gained": 27295,
       "avatar": "https://avatars.githubusercontent.com/u/63742054?v=4",
       "creator": {
@@ -161,7 +161,7 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "language": "JavaScript",
-      "stars": 75409,
+      "stars": 75424,
       "gained": 44600,
       "avatar": "https://avatars.githubusercontent.com/u/314135?v=4",
       "creator": {
@@ -175,7 +175,7 @@
       "url": "https://github.com/pingdotgg/t3code",
       "description": "The best way to control Claude Code, Codex and more from any computer or phone",
       "language": "TypeScript",
-      "stars": 65338,
+      "stars": 65387,
       "gained": 36872,
       "avatar": "https://avatars.githubusercontent.com/u/89191727?v=4",
       "creator": {
@@ -203,7 +203,7 @@
       "url": "https://github.com/milind-soni/OpenMausBot",
       "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
       "language": "TypeScript",
-      "stars": 25430,
+      "stars": 25461,
       "gained": 20270,
       "avatar": "https://avatars.githubusercontent.com/u/46266943?v=4",
       "creator": {
@@ -217,7 +217,7 @@
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 197250,
+      "stars": 197272,
       "gained": 15769,
       "avatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
       "creator": {
@@ -231,7 +231,7 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "language": "TypeScript",
-      "stars": 118270,
+      "stars": 118277,
       "gained": 17311,
       "avatar": "https://avatars.githubusercontent.com/u/683968?v=4",
       "creator": {
@@ -245,7 +245,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
       "language": "Rust",
-      "stars": 112954,
+      "stars": 112978,
       "gained": 30662,
       "avatar": "https://avatars.githubusercontent.com/u/43004?v=4",
       "creator": {
@@ -259,7 +259,7 @@
       "url": "https://github.com/backnotprop/plannotator",
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "language": "TypeScript",
-      "stars": 13476,
+      "stars": 13485,
       "gained": 3868,
       "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
       "creator": {
@@ -273,7 +273,7 @@
       "url": "https://github.com/HKUDS/DeepTutor",
       "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
       "language": "Python",
-      "stars": 60528,
+      "stars": 60545,
       "gained": 19065,
       "avatar": "https://avatars.githubusercontent.com/u/118165258?v=4",
       "creator": {
@@ -283,5 +283,32 @@
       }
     }
   ],
-  "fetchedAt": "2026-11-19T02:46:54+00:00"
+  "fetchedAt": "2026-11-19T03:41:38+00:00",
+  "previous": {
+    "fetchedAt": "2026-11-19T00:07:00+00:00",
+    "weekly": [
+      "meta/astryx",
+      "GoogleChrome/modern-web-guidance-src",
+      "anthropics/skills",
+      "we-promise/sure",
+      "alibaba/open-code-review",
+      "tradermonty/claude-trading-skills",
+      "ChromeDevTools/chrome-devtools-mcp",
+      "backnotprop/plannotator",
+      "elementalsouls/Claude-BugHunter",
+      "google-labs-code/stitch-skills"
+    ],
+    "monthly": [
+      "cloudflare/security-audit-skill",
+      "pingdotgg/t3code",
+      "pbakaus/impeccable",
+      "Nutlope/hallmark",
+      "milind-soni/OpenMausBot",
+      "HKUDS/DeepTutor",
+      "thedotmack/claude-mem",
+      "anthropics/skills",
+      "backnotprop/plannotator",
+      "php/php-src"
+    ]
+  }
 }
