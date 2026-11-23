@@ -1,0 +1,12 @@
+{
+  "problem": "Coding agents like Claude Code, Codex and Gemini CLI each store their model, keys and URLs in their own config, so a subscription or provider only works in one of them. magpie gives people who use several agents, providers or accounts one app and one local gateway to pick any model for any agent.",
+  "stack": {
+    "frontend": "Wails v3 desktop app (menu bar and window), Bubble Tea terminal UI, and a web UI",
+    "backend": "Go, running a local gateway with middleware, a plugin runtime (goja JavaScript engine), and MCP server support",
+    "database": "SQLite (modernc.org/sqlite), plus local config files",
+    "ai": "Routes requests for Claude Code, Codex, Gemini CLI and OpenCode to models such as DeepSeek, Kimi, GLM, Claude, ChatGPT, Copilot, Gemini and Grok; supports MCP servers",
+    "deploy": "Signed desktop app for macOS, Windows and Linux, install script, go install, Nix, Docker image (Debian-based), Termux, and a CLI"
+  },
+  "whatsNew": "Instead of editing each agent's config by hand, one local gateway sits between every agent and every model provider. It can switch models from the menu bar and automatically move to the next account or model when a quota runs out, so the agent never sees the error. It can also mask secrets in prompts on your own computer before they are sent (this is off by default).",
+  "technologies": ["Go", "Wails", "Bubble Tea", "SQLite", "goja", "MCP", "Docker", "Sigstore"]
+}
