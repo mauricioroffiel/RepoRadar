@@ -1,0 +1,12 @@
+{
+  "problem": "It lets people using the dsh AI tool call strong language models such as DeepSeek V4.1 Flash and Kimi K3 for free, without signing up, logging in or entering an API key.",
+  "stack": {
+    "frontend": "A six-page settings and dashboard UI inside dsh (glass-style look, usage charts, announcements), plus a standalone web management page",
+    "backend": "JavaScript (Node.js ES modules) plugin with no build step and no dependencies, running inside dsh. It includes a local OpenAI-compatible and Anthropic-style gateway.",
+    "database": "— (settings and usage stats are stored locally in a settings.json file on the user's machine)",
+    "ai": "Free upstream model gateways (OpenCode Zen, Kilo AI), many bring-your-own-key providers (OpenRouter, Groq, Gemini, DeepSeek and others), and account channels such as TRAE, Cline and Qoder",
+    "deploy": "Installed as a dsh plugin; also packaged as an npm package, a standalone CLI and a desktop app, with in-app updates"
+  },
+  "whatsNew": "It checks which models actually work from your own network and only shows those, and it sends the real reasoning-effort setting or token budget to the model. It can also chain models into fallback routes that switch silently on failure, and it can shrink tool outputs to save tokens.",
+  "technologies": ["JavaScript", "Node.js", "dsh plugin", "OpenAI-compatible API", "Anthropic Messages API", "DeepSeek", "Server-Sent Events", "SHA-256 verified updates"]
+}

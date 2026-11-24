@@ -5,8 +5,8 @@
       "url": "https://github.com/backnotprop/plannotator",
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "language": "TypeScript",
-      "stars": 14660,
-      "gained": 2815,
+      "stars": 14876,
+      "gained": 2395,
       "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
       "creator": {
         "login": "backnotprop",
@@ -19,8 +19,8 @@
       "url": "https://github.com/google-labs-code/stitch-skills",
       "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
       "language": "TypeScript",
-      "stars": 12264,
-      "gained": 2683,
+      "stars": 12613,
+      "gained": 2572,
       "avatar": "https://avatars.githubusercontent.com/u/161364575?v=4",
       "creator": {
         "login": "JLXIA",
@@ -33,8 +33,8 @@
       "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
       "description": "Keep your coding agent up to date with the latest web best practices",
       "language": "TypeScript",
-      "stars": 10503,
-      "gained": 3575,
+      "stars": 10797,
+      "gained": 2694,
       "avatar": "https://avatars.githubusercontent.com/u/1778935?v=4",
       "creator": {
         "login": "paulirish",
@@ -47,8 +47,8 @@
       "url": "https://github.com/alibaba/open-code-review",
       "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "language": "Go",
-      "stars": 55682,
-      "gained": 3700,
+      "stars": 56037,
+      "gained": 3015,
       "avatar": "https://avatars.githubusercontent.com/u/1961952?v=4",
       "creator": {
         "login": "lizhengfeng101",
@@ -61,8 +61,8 @@
       "url": "https://github.com/mvanhorn/last30days-skill",
       "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
       "language": "Python",
-      "stars": 73422,
-      "gained": 4731,
+      "stars": 74134,
+      "gained": 5448,
       "avatar": "https://avatars.githubusercontent.com/u/455140?v=4",
       "creator": {
         "login": "mvanhorn",
@@ -75,8 +75,8 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "description": "Chrome DevTools for coding agents",
       "language": "TypeScript",
-      "stars": 59018,
-      "gained": 2268,
+      "stars": 59198,
+      "gained": 1581,
       "avatar": "https://avatars.githubusercontent.com/u/11260967?v=4",
       "creator": {
         "login": "OrKoN",
@@ -89,8 +89,8 @@
       "url": "https://github.com/tradermonty/claude-trading-skills",
       "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
       "language": "Python",
-      "stars": 8032,
-      "gained": 2616,
+      "stars": 8280,
+      "gained": 1903,
       "avatar": "https://avatars.githubusercontent.com/u/205491838?v=4",
       "creator": {
         "login": "tradermonty",
@@ -103,8 +103,8 @@
       "url": "https://github.com/ag-ui-protocol/ag-ui",
       "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
       "language": "TypeScript",
-      "stars": 21377,
-      "gained": 3620,
+      "stars": 21553,
+      "gained": 2966,
       "avatar": "https://avatars.githubusercontent.com/u/209775067?v=4",
       "creator": {
         "login": "ranst91",
@@ -117,8 +117,8 @@
       "url": "https://github.com/meta/astryx",
       "description": "An open source design system that's fully customizable and agent ready",
       "language": "TypeScript",
-      "stars": 32563,
-      "gained": 3626,
+      "stars": 32849,
+      "gained": 3165,
       "avatar": "https://avatars.githubusercontent.com/u/69631?v=4",
       "creator": {
         "login": "cixzhang",
@@ -131,8 +131,8 @@
       "url": "https://github.com/pookjw/HermesEnabler",
       "description": "Enable Hermès Watch Faces on any Apple Watch devices",
       "language": "Objective-C",
-      "stars": 2446,
-      "gained": 461,
+      "stars": 2488,
+      "gained": 390,
       "avatar": "https://avatars.githubusercontent.com/u/11896738?v=4",
       "creator": {
         "login": "pookjw",
@@ -147,8 +147,8 @@
       "url": "https://github.com/Nutlope/hallmark",
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "language": "CSS",
-      "stars": 60070,
-      "gained": 29000,
+      "stars": 60529,
+      "gained": 29144,
       "avatar": "https://avatars.githubusercontent.com/u/63742054?v=4",
       "creator": {
         "login": "Nutlope",
@@ -161,8 +161,8 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "language": "JavaScript",
-      "stars": 77539,
-      "gained": 39307,
+      "stars": 77933,
+      "gained": 36869,
       "avatar": "https://avatars.githubusercontent.com/u/314135?v=4",
       "creator": {
         "login": "literally-dan",
@@ -175,8 +175,8 @@
       "url": "https://github.com/milind-soni/OpenMausBot",
       "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
       "language": "TypeScript",
-      "stars": 27177,
-      "gained": 21485,
+      "stars": 27497,
+      "gained": 21809,
       "avatar": "https://avatars.githubusercontent.com/u/46266943?v=4",
       "creator": {
         "login": "milind-soni",
@@ -189,8 +189,8 @@
       "url": "https://github.com/pingdotgg/t3code",
       "description": "The best way to control Claude Code, Codex and more from any computer or phone",
       "language": "TypeScript",
-      "stars": 74625,
-      "gained": 41514,
+      "stars": 77299,
+      "gained": 44453,
       "avatar": "https://avatars.githubusercontent.com/u/89191727?v=4",
       "creator": {
         "login": "juliusmarminge",
@@ -203,8 +203,8 @@
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
       "language": "Python",
-      "stars": 199462,
-      "gained": 16473,
+      "stars": 199922,
+      "gained": 16727,
       "avatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
       "creator": {
         "login": "rlancemartin",
@@ -217,8 +217,8 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "language": "TypeScript",
-      "stars": 119322,
-      "gained": 17416,
+      "stars": 119542,
+      "gained": 17492,
       "avatar": "https://avatars.githubusercontent.com/u/683968?v=4",
       "creator": {
         "login": "thedotmack",
@@ -231,8 +231,8 @@
       "url": "https://github.com/Jakeschincariol/instagram-agent-skill",
       "description": "Thirteen Claude skills that run an Instagram account: Reels off 26 scored hook formulas, a viral research skill, a caption linter, and a humanizer. Free, MIT.",
       "language": "Python",
-      "stars": 8645,
-      "gained": 5773,
+      "stars": 8960,
+      "gained": 6023,
       "avatar": "https://avatars.githubusercontent.com/u/196724947?v=4",
       "creator": {
         "login": "Jakeschincariol",
@@ -245,8 +245,8 @@
       "url": "https://github.com/backnotprop/plannotator",
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "language": "TypeScript",
-      "stars": 14660,
-      "gained": 4793,
+      "stars": 14876,
+      "gained": 5093,
       "avatar": "https://avatars.githubusercontent.com/u/7244317?v=4",
       "creator": {
         "login": "backnotprop",
@@ -255,55 +255,55 @@
       }
     },
     {
+      "name": "Ebony-Vinyl/dsh-our-free-model",
+      "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+      "description": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
+      "language": "JavaScript",
+      "stars": 85975,
+      "gained": 48139,
+      "avatar": "https://avatars.githubusercontent.com/u/245557608?v=4",
+      "creator": {
+        "login": "Ebony-Vinyl",
+        "avatar": "https://avatars.githubusercontent.com/u/245557608?v=4",
+        "role": "owner"
+      }
+    },
+    {
       "name": "HKUDS/DeepTutor",
       "url": "https://github.com/HKUDS/DeepTutor",
       "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
       "language": "Python",
-      "stars": 61934,
-      "gained": 19718,
+      "stars": 62289,
+      "gained": 19919,
       "avatar": "https://avatars.githubusercontent.com/u/118165258?v=4",
       "creator": {
         "login": "pancacake",
         "avatar": "https://avatars.githubusercontent.com/u/150592536?v=4",
         "role": "topContributor"
       }
-    },
-    {
-      "name": "yetone/magpie",
-      "url": "https://github.com/yetone/magpie",
-      "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
-      "language": "Go",
-      "stars": 40459,
-      "gained": 20728,
-      "avatar": "https://avatars.githubusercontent.com/u/1206493?v=4",
-      "creator": {
-        "login": "yetone",
-        "avatar": "https://avatars.githubusercontent.com/u/1206493?v=4",
-        "role": "owner"
-      }
     }
   ],
-  "fetchedAt": "2026-11-23T23:46:05+00:00",
+  "fetchedAt": "2026-11-24T22:18:14+00:00",
   "previous": {
-    "fetchedAt": "2026-11-22T19:26:45+00:00",
+    "fetchedAt": "2026-11-23T23:46:05+00:00",
     "weekly": [
-      "GoogleChrome/modern-web-guidance-src",
       "mvanhorn/last30days-skill",
       "alibaba/open-code-review",
       "meta/astryx",
       "ag-ui-protocol/ag-ui",
+      "GoogleChrome/modern-web-guidance-src",
       "backnotprop/plannotator",
+      "google-labs-code/stitch-skills",
       "tradermonty/claude-trading-skills",
       "ChromeDevTools/chrome-devtools-mcp",
-      "google-labs-code/stitch-skills",
       "pookjw/HermesEnabler"
     ],
     "monthly": [
-      "cloudflare/security-audit-skill",
       "pingdotgg/t3code",
-      "pbakaus/impeccable",
+      "cloudflare/security-audit-skill",
       "Nutlope/hallmark",
       "milind-soni/OpenMausBot",
+      "yetone/magpie",
       "HKUDS/DeepTutor",
       "thedotmack/claude-mem",
       "anthropics/skills",
