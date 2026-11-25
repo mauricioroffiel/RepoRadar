@@ -1,0 +1,12 @@
+{
+  "problem": "Nod is a personal AI agent that does everyday errands for you, like chasing invoices, preparing call briefs and cancelling trials on real websites. It is for people who want an assistant that runs on their own machine and asks before acting.",
+  "stack": {
+    "frontend": "React web app, plus an Electron desktop app; also chat through Telegram and WhatsApp",
+    "backend": "TypeScript on Node.js 24 with Fastify, the Pi agent runtime, agent-browser, Composio and MCP for connecting apps",
+    "database": "PostgreSQL, with pg-boss for job scheduling",
+    "ai": "Model of your choice (OpenAI, Anthropic, Gemini, OpenRouter, Bedrock, Vertex AI, Azure, 20+ more, or your own server); Pi agent runtime",
+    "deploy": "Self-hosted: one Node process plus Docker containers (Linux workspace sandbox and Chromium browser), or a desktop app for macOS, Windows preview and Linux preview"
+  },
+  "whatsNew": "The safety rules live in the server, not in the prompt: the server checks every app action and risky website step against your rules, and anything not covered waits for your yes. Passwords and cards are typed into sites by a Vault so the model never sees them, and web or email content reaches the model marked as data, not instructions.",
+  "technologies": ["TypeScript", "Node.js", "Fastify", "React", "PostgreSQL", "Electron", "MCP", "Docker"]
+}
